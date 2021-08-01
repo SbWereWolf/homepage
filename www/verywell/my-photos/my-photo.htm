@@ -17,39 +17,6 @@
 
 <body>
 
-<script><!--
-const ua = window.navigator.userAgent;
-let msie = ua.indexOf("MSIE ");
-if (msie > 0)
-    msie = parseInt(ua.substring(msie + 5, ua.indexOf(".", msie)));
-let netscape = 0;
-if (window.navigator.appName.toLowerCase() === "netscape") {
-    const version = window.navigator.appVersion;
-    if (version != null && version.length >= 2) {
-        const p = version.indexOf(".");
-        if (p > 0)
-            netscape = parseInt(version.substring(0, p));
-    }
-}
-
-function imgOnClick(imgSrc, width, height) {
-    if (msie < 3 && netscape < 3) return true;
-    if (window.screen == null || window.screen.width == null
-        || window.screen.height == null) return true;
-    const w = Math.min((width > 0) ? width + 48 : 600, window.screen.width - 32);
-    const h = Math.min((height > 0) ? height + 48 : window.screen.height - 150, window.screen.height - 48);
-    const l = 22;
-    const t = 15;
-    window.imgview_src = imgSrc;
-    window.imgview_width = width;
-    window.imgview_height = height;
-    window.open("../werewolf83/bots/imgview.htm", "_blank",
-        "width=" + w + ",height=" + h + ",left=" + l + ",top=" + t + ",status=no,toolbar=no,"
-        + "menubar=no,scrollbars=yes,resizable=yes,location=no");
-    return false;
-}
-//--></script>
-
 <table class="poem600 middle">
     <tr>
         <td>Сайт <a href="../photo">werewolf83.ru</a></td>
@@ -403,4 +370,5 @@ function imgOnClick(imgSrc, width, height) {
 </table>
 
 </body>
+<script src="my-photo.js"></script>
 </html>
