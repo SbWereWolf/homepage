@@ -1,3 +1,9 @@
 /.idea/
-www/storage/load/**
-www/storage/**
+
+/www/storage/load/**
+!/www/storage/load/.gitkeep
+/www/storage/photo/**
+!/www/storage/photo/.gitkeep
+
+/fs/homepage/var/log/apache2/**
+!/fs/homepage/var/log/apache2/.gitkeep

@@ -1,0 +1,10 @@
+services:
+  web:
+    image: homepage
+    build: ./
+    ports:
+      - 80:80
+    volumes:
+      - ./fs/homepage/etc/apache2:/etc/apache2/
+      - ./www/:/home/www/
+      - ./fs/homepage/var/log/apache2:/var/log/apache2/
