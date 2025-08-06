@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "types": [
+      "vite/client"
+    ],
+    "allowImportingTsExtensions": true,
+    "skipLibCheck": true,
+    "strict": true
+  }
+}
