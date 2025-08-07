@@ -1,0 +1,105 @@
+@import "tailwindcss";
+@layer sb-werewolf-2025;
+
+@layer sb-werewolf-2025 {
+    body {
+        @apply w-3xl m-auto;
+    }
+
+    header {
+        @apply h-24 flex ;
+
+        p {
+            @apply text-3xl p-5 hover:bg-green-400 m-auto rounded-2xl;
+        }
+    }
+
+    div.page-content {
+        @apply flex flex-row p-4 border border-amber-300 rounded-2xl;
+    }
+
+    aside {
+        @apply flex flex-col bg-emerald-100 rounded-xl sticky top-2 h-screen;
+
+        ul {
+            @apply flex flex-col gap-2 p-2;
+
+            li.current-page {
+                @apply border-2 border-blue-700 bg-green-400 p-1 rounded-xl;
+            }
+
+            li.other-page {
+                @apply border-2 border-blue-700 hover:bg-green-300 p-1 rounded-xl;
+            }
+        }
+    }
+
+    article {
+        @apply flex flex-col p-2 mx-2 bg-emerald-300 hover:bg-emerald-200 rounded-xl;
+
+        p {
+            @apply w-fit indent-4 p-2 m-1 hover:bg-emerald-300 rounded;
+            @apply first-letter:capitalize first-letter:font-semibold first-letter:text-green-950;
+        }
+
+        p.short {
+            @apply py-2 px-4 indent-0;
+        }
+
+        time {
+            @apply text-xs pl-4 font-bold [align-self:flex-end];
+        }
+
+        a {
+            @apply text-blue-700 underline hover:bg-green-200 rounded px-2;
+        }
+
+        ul {
+            @apply flex flex-col gap-2 p-2;
+
+            li {
+                @apply w-fit list-disc list-inside px-4 hover:bg-emerald-300;
+            }
+        }
+    }
+
+    article.upper {
+        @apply mb-5;
+    }
+
+    article.in-between {
+        @apply my-5;
+    }
+
+    article.lower {
+        @apply mt-5;
+    }
+
+    h1 {
+        @apply text-5xl p-2;
+    }
+
+    h2 {
+        @apply text-4xl p-2;
+    }
+
+    h3 {
+        @apply text-3xl py-2 px-4;
+    }
+
+    h4 {
+        @apply text-xl px-4;
+    }
+
+    dl {
+        @apply p-4;
+
+        dt {
+            @apply font-bold;
+        }
+
+        dd {
+            @apply w-fit py-1 px-2 ml-8 hover:bg-emerald-300;
+        }
+    }
+}
