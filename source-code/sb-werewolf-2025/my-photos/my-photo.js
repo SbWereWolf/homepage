@@ -20,7 +20,7 @@ function imgOnClick(imgSrc, width, height) {
     window.imgview_src = imgSrc;
     window.imgview_width = width;
     window.imgview_height = height;
-    window.open("imgview.htm", "_blank",
+    window.open("imgview.html", "_blank",
         "width=" + w
         + ",height=" + h
         + ",left=" + l

@@ -9,10 +9,11 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^7.0.4"
+    "vite": "^7.0.4",
+    "@tailwindcss/vite": "^4.1.11",
+    "glob": "^11.0.3",
+    "tailwindcss": "^4.1.11"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.11",
-    "tailwindcss": "^4.1.11"
   }
 }
