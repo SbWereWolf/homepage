@@ -78,6 +78,26 @@
     article > div {
 
         @apply flex flex-col ;
+
+        div.table-table {
+            @apply flex flex-col;
+
+            div.table-row {
+
+                @apply flex border-2 border-fuchsia-700 flex-wrap;
+
+                div.table-cell {
+                    @apply border-2 border-fuchsia-950 m-1 min-w-min;
+
+                    p {
+                        @apply text-xs lg:text-sm p-0;
+                        @apply indent-0 first-letter:normal-case ;
+                        @apply first-letter:font-normal ;
+                        @apply first-letter:text-inherit;
+                    }
+                }
+            }
+        }
     }
 
     article div.item-list {
