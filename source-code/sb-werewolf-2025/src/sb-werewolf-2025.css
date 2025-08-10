@@ -55,7 +55,7 @@
 
                 button {
                     @apply border-2 border-blue-700 rounded-xl w-full ;
-                    @apply px-2 py-1;
+                    @apply px-2 py-1  hover:cursor-pointer;
                     @apply capitalize break-normal text-start;
                 }
             }
@@ -92,6 +92,20 @@
 
     article div {
 
+        h2, h3 {
+            @apply mx-auto;
+        }
+
+        a.link-with-no-underline {
+            @apply no-underline m-auto;
+
+            button {
+                @apply block  hover:cursor-pointer;
+                @apply p-1 border-2 border-blue-700 rounded-xl;
+                @apply break-normal;
+            }
+        }
+
         p {
             @apply w-fit sm:indent-4 py-2 sm:p-2 m-1 hover:bg-emerald-300 rounded;
             @apply first-letter:capitalize first-letter:font-semibold first-letter:text-blue-800;
@@ -111,6 +125,14 @@
 
             li {
                 @apply w-fit list-disc list-inside px-4 hover:bg-emerald-300;
+            }
+        }
+
+        ul.poem {
+            @apply flex flex-col sm:gap-2 sm:p-2 mx-auto;
+
+            li {
+                @apply w-fit list-none list-outside px-4 hover:bg-emerald-300;
             }
         }
     }
