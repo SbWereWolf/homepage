@@ -50,12 +50,14 @@
         ul {
             @apply flex flex-col gap-2 p-2;
 
-            li a {
-                @apply capitalize break-normal;
-            }
-
             li {
-                @apply px-2 border-2 border-blue-700 p-1 rounded-xl;
+                @apply rounded-xl;
+
+                button {
+                    @apply border-2 border-blue-700 rounded-xl w-full ;
+                    @apply px-2 py-1;
+                    @apply capitalize break-normal text-start;
+                }
             }
 
             li.current-page {
@@ -100,7 +102,8 @@
         }
 
         a {
-            @apply text-blue-700 underline hover:bg-green-200 rounded sm:px-2;
+            @apply rounded sm:px-2 underline;
+            @apply text-blue-600 visited:text-blue-950 hover:bg-green-200;
         }
 
         ul {
