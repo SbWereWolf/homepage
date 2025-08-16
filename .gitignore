@@ -8,3 +8,4 @@
 /fs/homepage/var/log/apache2/**
 !/fs/homepage/var/log/apache2/.gitkeep
 /source-code/storage/**
+/www/node_modules/**
