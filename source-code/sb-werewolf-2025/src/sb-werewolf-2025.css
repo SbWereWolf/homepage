@@ -140,6 +140,20 @@
             @apply text-blue-600 visited:text-blue-950 hover:bg-green-200;
         }
 
+        div.tile {
+            @apply grid grid-cols-[repeat(auto-fill,_minmax(150px, _1fr))];
+            @apply gap-x-1 gap-y-4;
+
+            figure {
+                @apply border-b-2 border-green-600;
+
+                a {
+                    @apply p-0;
+                }
+            }
+
+        }
+
         ul {
             @apply flex flex-col sm:gap-2 sm:p-2;
 
@@ -159,6 +173,10 @@
 
     article div.bottom {
         @apply mb-0;
+    }
+
+    figcaption {
+        @apply text-balance text-center;
     }
 
     h1, h2, h3, h4, h5, h6 {
