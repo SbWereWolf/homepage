@@ -141,7 +141,7 @@
         }
 
         div.tile {
-            @apply grid grid-cols-[repeat(auto-fill,_minmax(150px, _1fr))];
+            @apply grid grid-cols-[repeat(auto-fill,_minmax(150px,_1fr))];
             @apply gap-x-1 gap-y-4;
 
             figure {
@@ -159,6 +159,14 @@
 
             li {
                 @apply w-fit list-disc list-inside px-4 hover:bg-emerald-300;
+            }
+        }
+
+        ul.pages-list{
+            @apply flex flex-col sm:flex-row sm:gap-2 sm:p-2;
+
+            li {
+                @apply w-fit list-none list-inside px-1 hover:bg-emerald-300;
             }
         }
 
