@@ -1,10 +1,15 @@
 services:
-  web:
-    image: homepage
-    build: ./
-    ports:
-      - 80:80
+  nginx:
+    image: valian/docker-nginx-auto-ssl
+    environment:
+      ALLOWED_DOMAINS: 'kv1.me'
     volumes:
-      - ./fs/homepage/etc/apache2:/etc/apache2/
-      - ./www/:/home/www/
-      - ./fs/homepage/var/log/apache2:/var/log/apache2/
+      - ssl_data:/etc/resty-auto-ssl
+      - ./www:/var/www
+      - ./fs/etc/nginx/conf.d/kv1.me.conf:/etc/nginx/conf.d/kv1.me.conf
+    ports:
+      - 443:443
+      - 80:80
+
+volumes:
+  ssl_data:
