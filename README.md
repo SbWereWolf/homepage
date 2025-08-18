@@ -3,6 +3,6 @@
 Команда для win10
 
 ```shell
-cd .\source-code
+cd .\src
 mklink /D "storage" "..\www\storage"
 ```
