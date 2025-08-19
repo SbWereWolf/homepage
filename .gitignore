@@ -1,10 +1,11 @@
-/.idea/
+/.idea/**
 
 /www/storage/load/**
 !/www/storage/load/.gitkeep
 /www/storage/photo/**
 !/www/storage/photo/.gitkeep
+/src/sb-werewolf-2025/src/out/**
+!/src/sb-werewolf-2025/src/out/.gitkeep
 
 /src/node_modules/**
-/src/sb-werewolf-2025/src/dist/**
 /www/sb-werewolf-2025/**
