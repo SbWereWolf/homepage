@@ -1,6 +1,7 @@
 services:
   nginx:
     image: valian/docker-nginx-auto-ssl
+    restart: unless-stopped
     environment:
       ALLOWED_DOMAINS: 'kv1.me'
     volumes:
