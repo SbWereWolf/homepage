@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Server Metrics</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<h2>Server Metrics</h2>
+<canvas id="chart"></canvas>
+
+<script>
+    fetch('data.json')
+        .then(r => r.json())
+        .then(data => {
+            const ctx = document.getElementById('chart');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.map(d => d.time),
+                    datasets: [
+                        {
+                            label: 'Load',
+                            data: data.map(d => d.load),
+                            borderColor: 'red'
+                        },
+                        {
+                            label: 'RAM %',
+                            data: data.map(d => d.ram),
+                            borderColor: 'blue'
+                        }
+                    ]
+                }
+            });
+        });
+</script>
+</body>
+</html>
