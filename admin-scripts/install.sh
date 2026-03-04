@@ -3,93 +3,105 @@ set -euo pipefail
 
 # Bootstrap / update server for kv1.me project.
 # Run as root from inside repo: /home/homepage/admin-scripts/install.sh
+# chmod +x /home/homepage/admin-scripts/install.sh
 
-if [ "$(id -u)" -ne 0 ]; then
-  echo "Run as root." >&2
-  exit 1
-fi
-
-BASE_DIR="/home/homepage"
-SCRIPTS_DIR="$BASE_DIR/admin-scripts"
-STAMP="$(date +%Y%m%d-%H%M%S)"
-
-backup_if_exists() {
-  local path="$1"
-  if [ -f "$path" ]; then
-    cp -a "$path" "${path}.bak-${STAMP}"
-  fi
-}
+APP_DIR="/home/homepage"
+SCRIPTS_DIR="$APP_DIR/admin-scripts"
 
 echo "=== kv1 bootstrap started ==="
 
-# 1) Packages
+if [ "$(id -u)" -ne 0 ]; then
+  echo "Run as root: sudo $0"
+  exit 1
+fi
+
 export DEBIAN_FRONTEND=noninteractive
-apt update
-apt install -y docker.io docker-compose-plugin fail2ban curl wget logrotate
 
-# 2) Docker daemon (limit container logs)
-mkdir -p /etc/docker
-backup_if_exists /etc/docker/daemon.json
-cp "$SCRIPTS_DIR/config/docker-daemon.json" /etc/docker/daemon.json
+apt-get update
+apt-get install -y --no-install-recommends \
+  ca-certificates curl git wget bc logrotate fail2ban
 
-systemctl enable docker
-systemctl restart docker
+# --- Docker: НЕ ставим docker-ce/containerd.io, чтобы не ловить конфликты на Debian ---
+if ! command -v docker >/dev/null 2>&1; then
+  echo "Docker not found -> installing Debian docker.io"
+  apt-get install -y --no-install-recommends docker.io docker-compose-plugin || \
+  apt-get install -y --no-install-recommends docker.io docker-compose
+fi
 
-# 3) journald limits (drop-in)
-mkdir -p /etc/systemd/journald.conf.d
-backup_if_exists /etc/systemd/journald.conf.d/99-limits.conf
-cp "$SCRIPTS_DIR/config/journald-limits.conf" /etc/systemd/journald.conf.d/99-limits.conf
-systemctl restart systemd-journald || true
+systemctl enable --now docker
 
-# 4) Fail2ban sshd policy
-backup_if_exists /etc/fail2ban/jail.local
-cp "$SCRIPTS_DIR/config/fail2ban-jail.local" /etc/fail2ban/jail.local
-systemctl enable fail2ban
-systemctl restart fail2ban || true
+# docker compose plugin check
+if ! docker compose version >/dev/null 2>&1; then
+  apt-get install -y --no-install-recommends docker-compose-plugin || true
+fi
 
-# 5) logrotate for watchdog/metrics/maintenance logs (+ legacy apache logs)
-cp "$SCRIPTS_DIR/config/logrotate-server-watchdog.conf" /etc/logrotate.d/server-watchdog
-cp "$SCRIPTS_DIR/config/logrotate-apache-homepage.conf" /etc/logrotate.d/apache-homepage || true
+# --- docker daemon config (лог-лимиты и т.п.) ---
+if [ -f "$SCRIPTS_DIR/config/docker-daemon.json" ]; then
+  install -D -m 0644 "$SCRIPTS_DIR/config/docker-daemon.json" /etc/docker/daemon.json
+  systemctl restart docker || true
+fi
 
-# fix logrotate status perms warning
+# --- docker systemd watchdog override ---
+if [ -f "$SCRIPTS_DIR/systemd/docker.override.conf" ]; then
+  mkdir -p /etc/systemd/system/docker.service.d
+  install -m 0644 "$SCRIPTS_DIR/systemd/docker.override.conf" /etc/systemd/system/docker.service.d/override.conf
+  systemctl daemon-reload
+  systemctl restart docker || true
+fi
+
+# --- journald limits (drop-in) ---
+if [ -f "$SCRIPTS_DIR/config/journald-limits.conf" ]; then
+  mkdir -p /etc/systemd/journald.conf.d
+  install -m 0644 "$SCRIPTS_DIR/config/journald-limits.conf" /etc/systemd/journald.conf.d/kv1.conf
+  systemctl restart systemd-journald || true
+fi
+
+# --- fail2ban rules ---
+if [ -f "$SCRIPTS_DIR/config/fail2ban-jail.local" ]; then
+  install -m 0644 "$SCRIPTS_DIR/config/fail2ban-jail.local" /etc/fail2ban/jail.local
+  systemctl enable --now fail2ban
+  systemctl restart fail2ban || true
+fi
+
+# --- logrotate configs ---
+if [ -f "$SCRIPTS_DIR/config/logrotate-server-watchdog.conf" ]; then
+  install -m 0644 "$SCRIPTS_DIR/config/logrotate-server-watchdog.conf" /etc/logrotate.d/server-watchdog
+fi
+
+if [ -f "$SCRIPTS_DIR/config/logrotate-apache-homepage.conf" ]; then
+  install -m 0644 "$SCRIPTS_DIR/config/logrotate-apache-homepage.conf" /etc/logrotate.d/apache2-homepage
+fi
+
+# logrotate status permissions (чтобы убрать warning world-readable)
 if [ -f /var/lib/logrotate/status ]; then
   chmod 600 /var/lib/logrotate/status || true
 fi
 
-# 6) Docker watchdog (systemd override)
-mkdir -p /etc/systemd/system/docker.service.d
-backup_if_exists /etc/systemd/system/docker.service.d/override.conf
-cp "$SCRIPTS_DIR/systemd/docker.override.conf" /etc/systemd/system/docker.service.d/override.conf
-systemctl daemon-reload
-systemctl restart docker || true
+# --- kv1 compose autostart service ---
+if [ -f "$SCRIPTS_DIR/systemd/kv1.service" ]; then
+  install -m 0644 "$SCRIPTS_DIR/systemd/kv1.service" /etc/systemd/system/kv1.service
+  systemctl daemon-reload
+  systemctl enable --now kv1.service || true
+fi
 
-# 7) Install project systemd units
-for f in server-watchdog.service server-watchdog.timer server-maintenance.service server-maintenance.timer kv1.service; do
-  backup_if_exists "/etc/systemd/system/$f"
-  cp "$SCRIPTS_DIR/systemd/$f" "/etc/systemd/system/$f"
-done
+# --- watchdog ---
+if [ -f "$SCRIPTS_DIR/systemd/server-watchdog.service" ] && [ -f "$SCRIPTS_DIR/systemd/server-watchdog.timer" ]; then
+  install -m 0644 "$SCRIPTS_DIR/systemd/server-watchdog.service" /etc/systemd/system/server-watchdog.service
+  install -m 0644 "$SCRIPTS_DIR/systemd/server-watchdog.timer" /etc/systemd/system/server-watchdog.timer
+  systemctl daemon-reload
+  systemctl enable --now server-watchdog.timer
+fi
 
-systemctl daemon-reload
+# --- maintenance ---
+if [ -f "$SCRIPTS_DIR/systemd/server-maintenance.service" ] && [ -f "$SCRIPTS_DIR/systemd/server-maintenance.timer" ]; then
+  install -m 0644 "$SCRIPTS_DIR/systemd/server-maintenance.service" /etc/systemd/system/server-maintenance.service
+  install -m 0644 "$SCRIPTS_DIR/systemd/server-maintenance.timer" /etc/systemd/system/server-maintenance.timer
+  systemctl daemon-reload
+  systemctl enable --now server-maintenance.timer
+fi
 
-# Disable any legacy root-based units if present (best-effort)
-# (just in case someone created separate service names)
-systemctl stop server-watchdog.timer >/dev/null 2>&1 || true
-systemctl disable server-watchdog.timer >/dev/null 2>&1 || true
-systemctl stop server-maintenance.timer >/dev/null 2>&1 || true
-systemctl disable server-maintenance.timer >/dev/null 2>&1 || true
+# --- cleanup old root-based scripts if exist ---
+rm -f /root/server-watchdog.sh /root/metrics-export.sh /root/server-maintenance.sh 2>/dev/null || true
 
-# Enable our timers/services
-systemctl enable --now server-watchdog.timer
-systemctl enable --now server-maintenance.timer
-systemctl enable --now kv1.service
-
-# 8) Ensure metrics folder exists
-mkdir -p "$BASE_DIR/www/metrics"
-# create initial data.json (optional)
-"$SCRIPTS_DIR/metrics-export.sh" >/dev/null 2>&1 || true
-
+systemctl reset-failed || true
 echo "=== kv1 bootstrap done ==="
-echo "Check:"
-echo "  systemctl list-timers | egrep 'watchdog|maintenance'"
-echo "  systemctl status kv1"
-echo "  docker ps"
