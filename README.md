@@ -1,4 +1,10 @@
-# Настроить окружение разработки
+# Домашняя страничка Коли Вольхина aka 5-Sb WereWolf
+
+## DEPLOY
+
+[DEPLOY](admin-scripts/DEPLOY.md)
+
+## Настроить окружение разработки
 
 Разработка сайта sb-werewolf-2025 ведётся с помощью Vite
 (ради горячей перезагрузки). Исходники лежат в директории `src`.
@@ -16,7 +22,7 @@ cd .\src
 mklink /D "storage" "..\www\storage"
 ```
 
-## Сборка sb-werewolf-2025
+### Сборка sb-werewolf-2025
 Если в директории с исходниками делать `npm run build` 
 (в директории разработки - в `src`),
 то Vite вообще всё заливает в директорию `src/dist/assets`,
@@ -40,7 +46,7 @@ mkdir .\src\sb-werewolf-2025\src\out
 npx @tailwindcss/cli -i ./src/sb-werewolf-2025/src/sb-werewolf-2025.css -o ./src/sb-werewolf-2025/src/out/sb-werewolf-2025.css
 ```
 
-## Публикация sb-werewolf-2025
+### Публикация sb-werewolf-2025
 После сборки CSS файла:
 - удаляем всё в `www/sb-werewolf-2025`, 
 - копируем всё из `src/sb-werewolf-2025` в `www/sb-werewolf-2025`,
