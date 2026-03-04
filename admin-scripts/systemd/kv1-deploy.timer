@@ -1,0 +1,21 @@
+# 2) Добавляем авто-деплой из git (polling, без webhook)
+# Сделаем деплой, который:
+# берёт изменения из origin/master
+# если есть новые коммиты → делает docker compose pull + up -d
+# пишет лог в /var/log/kv1-deploy.log
+# защищён от параллельных запусков (flock)
+
+# timer (каждые 5 минут)
+
+[Unit]
+Description=Run KV1 Auto Deploy every 5 minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=5min
+RandomizedDelaySec=20
+Persistent=true
+Unit=kv1-deploy.service
+
+[Install]
+WantedBy=timers.target

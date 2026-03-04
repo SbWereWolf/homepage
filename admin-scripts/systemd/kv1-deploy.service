@@ -1,0 +1,18 @@
+# 2) Добавляем авто-деплой из git (polling, без webhook)
+# Сделаем деплой, который:
+# берёт изменения из origin/master
+# если есть новые коммиты → делает docker compose pull + up -d
+# пишет лог в /var/log/kv1-deploy.log
+# защищён от параллельных запусков (flock)
+
+# 2.2 systemd service
+
+[Unit]
+Description=KV1 Auto Deploy
+After=network-online.target docker.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/homepage
+ExecStart=/home/homepage/admin-scripts/deploy.sh
