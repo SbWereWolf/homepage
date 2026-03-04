@@ -1,0 +1,8 @@
+[Unit]
+Description=Server Watchdog (self-healing checks)
+Wants=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/home/homepage/admin-scripts/server-watchdog.sh

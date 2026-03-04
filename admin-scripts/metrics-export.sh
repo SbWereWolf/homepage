@@ -1,24 +1,35 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
-# Делаем конвертер логов в JSON
-# chmod +x /root/metrics-export.sh
+# Конвертирует /var/log/server-metrics.log -> /home/homepage/www/metrics/data.json
+# Формат входа (одна строка):
+#   2026-03-04T03:10:00+03:00 load=0.25 ram=32 health=healthy
 
 INPUT="/var/log/server-metrics.log"
 OUTPUT="/home/homepage/www/metrics/data.json"
 
-echo "[" > $OUTPUT
+mkdir -p "$(dirname "$OUTPUT")"
 
-tail -100 $INPUT | awk '
+if [ ! -f "$INPUT" ]; then
+  echo "[]" > "$OUTPUT"
+  exit 0
+fi
+
+# Берём последние 200 точек
+tail -200 "$INPUT" | awk '
+BEGIN { print "["; first=1 }
 {
-  split($4,a,"=");
-  split($5,b,"=");
-  split($6,c,"=");
-
-  printf "{\"time\":\"%s %s %s\",\"load\":%s,\"ram\":%s},\n",
-         $1" "$2" "$3,
-         a[2],
-         substr(b[2],1,length(b[2])-1)
-}' >> $OUTPUT
-
-sed -i '$ s/,$//' $OUTPUT
-echo "]" >> $OUTPUT
+  ts=$1
+  load="0"; ram="0"; health="unknown"
+  for (i=2; i<=NF; i++) {
+    split($i, kv, "=")
+    if (kv[1]=="load") load=kv[2]
+    if (kv[1]=="ram")  ram=kv[2]
+    if (kv[1]=="health") health=kv[2]
+  }
+  if (!first) printf ",\n"
+  first=0
+  printf "{\"time\":\"%s\",\"load\":%s,\"ram\":%s,\"health\":\"%s\"}", ts, load, ram, health
+}
+END { print "\n]" }
+' > "$OUTPUT"

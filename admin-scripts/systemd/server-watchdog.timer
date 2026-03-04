@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Server Watchdog every 2 minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=2min
+Persistent=true
+Unit=server-watchdog.service
+
+[Install]
+WantedBy=timers.target

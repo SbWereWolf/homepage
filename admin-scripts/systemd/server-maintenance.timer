@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Server Maintenance daily
+
+[Timer]
+OnBootSec=10min
+OnCalendar=*-*-* 03:15:00
+Persistent=true
+Unit=server-maintenance.service
+
+[Install]
+WantedBy=timers.target

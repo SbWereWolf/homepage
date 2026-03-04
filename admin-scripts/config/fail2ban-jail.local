@@ -1,0 +1,6 @@
+[sshd]
+enabled = true
+port = 22
+maxretry = 4
+findtime = 10m
+bantime = 24h
