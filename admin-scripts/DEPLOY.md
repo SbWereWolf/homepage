@@ -15,33 +15,38 @@
 
 ## Поднятие с нуля
 
-1) Зайти на сервер под root.
+1. Зайти на сервер под root.
 
-2) Поставить git (если нет):
+2. Поставить git (если нет):
+
 ```bash
 apt update && apt install -y git
 ```
 
-3) Склонировать репозиторий в `/home/homepage`:
+1. Склонировать репозиторий в `/home/homepage`:
+
 ```bash
 cd /home
 git clone <YOUR_REPO_URL> homepage
 cd /home/homepage
 ```
 
-4) Запустить bootstrap:
+1. Запустить bootstrap:
+
 ```bash
 chmod +x /home/homepage/admin-scripts/install.sh
 /home/homepage/admin-scripts/install.sh
 ```
 
-5) Поднять сайт:
+1. Поднять сайт:
+
 ```bash
 cd /home/homepage
 docker compose up -d
 ```
 
-6) Проверки:
+1. Проверки:
+
 ```bash
 docker ps
 systemctl status kv1
@@ -59,6 +64,7 @@ tail -n 50 /var/log/server-metrics.log
   - `/root/metrics-export.sh`
   - `/root/server-maintenance.sh` (если был)
 - убедиться, что активны таймеры из `/home/homepage/admin-scripts`:
+
 ```bash
 systemctl list-timers | grep watchdog
 systemctl cat server-watchdog.service
