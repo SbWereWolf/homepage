@@ -4,9 +4,10 @@
 
 ## Что делает install.sh
 
-- ставит Docker + docker compose plugin
+- ставит Docker +docker compose plugin
 - ограничивает docker-логи (`/etc/docker/daemon.json`)
-- ограничивает systemd journal (drop-in в `/etc/systemd/journald.conf.d/`)
+- ограничивает systemd journal 
+  (drop-in в `/etc/systemd/journald.conf.d/`)
 - настраивает fail2ban (jail `sshd`)
 - включает self-healing watchdog (systemd timer каждые 2 минуты)
 - включает daily maintenance (systemd timer)
@@ -15,37 +16,37 @@
 
 ## Поднятие с нуля
 
-1. Зайти на сервер под root.
+### 1. Зайти на сервер под root.
 
-2. Поставить git (если нет):
+### 2. Поставить git (если нет):
 
 ```bash
 apt update && apt install -y git
 ```
 
-1. Склонировать репозиторий в `/home/homepage`:
+### 3. Склонировать репозиторий в `/home/homepage`:
 
 ```bash
 cd /home
-git clone <YOUR_REPO_URL> homepage
+git clone https://github.com/SbWereWolf/homepage.git homepage
 cd /home/homepage
 ```
 
-1. Запустить bootstrap:
+### 4. Запустить bootstrap:
 
 ```bash
 chmod +x /home/homepage/admin-scripts/install.sh
 /home/homepage/admin-scripts/install.sh
 ```
 
-1. Поднять сайт:
+### 5. Поднять сайт:
 
 ```bash
 cd /home/homepage
 docker compose up -d
 ```
 
-1. Проверки:
+### 6. Проверки:
 
 ```bash
 docker ps
@@ -55,25 +56,10 @@ tail -n 50 /var/log/server-watchdog.log
 tail -n 50 /var/log/server-metrics.log
 ```
 
-## Миграция со старой схемы (/root)
-
-Если ранее скрипты лежали в `/root` и systemd units указывали на них:
-
-- удалить старые файлы:
-  - `/root/server-watchdog.sh`
-  - `/root/metrics-export.sh`
-  - `/root/server-maintenance.sh` (если был)
-- убедиться, что активны таймеры из `/home/homepage/admin-scripts`:
-
-```bash
-systemctl list-timers | grep watchdog
-systemctl cat server-watchdog.service
-```
-
 ## Метрики
 
-Watchdog пишет метрики в `/var/log/server-metrics.log` и экспортирует JSON в:
-`/home/homepage/www/metrics/data.json`
+Watchdog пишет метрики в `/var/log/server-metrics.log` и экспортирует
+JSON в: `/home/homepage/www/metrics/data.json`
 
 Страница графика лежит в `www/metrics/index.html` и будет доступна по:
 `https://kv1.me/metrics/`
