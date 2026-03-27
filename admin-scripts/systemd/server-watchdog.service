@@ -6,4 +6,4 @@ After=docker.service
 [Service]
 Type=oneshot
 EnvironmentFile=-/etc/kv1/telegram.env
-ExecStart=/home/homepage/admin-scripts/server-watchdog.sh
+ExecStart=/usr/local/bin/server-watchdog

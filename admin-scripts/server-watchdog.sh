@@ -6,6 +6,7 @@ METRIC_LOG="/var/log/server-metrics.log"
 STATE="/var/lib/server-watchdog.state"
 REBOOT_STATE="/var/lib/server-watchdog.reboot"
 
+# --- Telegram (optional, set via /etc/kv1/telegram.env) ---
 TELEGRAM_TOKEN="${TELEGRAM_TOKEN:-}"
 TELEGRAM_CHAT="${TELEGRAM_CHAT:-}"
 
@@ -28,7 +29,6 @@ REBOOT_COOLDOWN=3600
 
 CONTAINER="homepage-nginx-1"
 COMPOSE_UNIT="kv1.service"
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 mkdir -p /var/lib
 
@@ -49,14 +49,18 @@ write_metrics() {
   echo "$ts load=$load ram=$ram health=$health" >> "$METRIC_LOG"
 }
 
+# ===== INIT STATE =====
 [ -f "$STATE" ] || echo "0" > "$STATE"
 FAIL_COUNT="$(cat "$STATE" 2>/dev/null || echo 0)"
 
+# grace after reboot
 UPTIME="$(cut -d. -f1 /proc/uptime 2>/dev/null || echo 0)"
 [ "$UPTIME" -lt "$BOOT_GRACE" ] && exit 0
 
+# metrics
 write_metrics
 
+# grace after container start
 if container_exists; then
   STARTED_AT="$(docker inspect -f '{{.State.StartedAt}}' "$CONTAINER" 2>/dev/null || true)"
   if [ -n "$STARTED_AT" ]; then
@@ -84,10 +88,12 @@ fi
 
 if ! container_exists; then
   log_action "Container missing: $CONTAINER"
-  PROBLEM=1; MISSING_OR_STOPPED=1
+  PROBLEM=1
+  MISSING_OR_STOPPED=1
 elif ! container_running; then
   log_action "Container not running: $CONTAINER"
-  PROBLEM=1; MISSING_OR_STOPPED=1
+  PROBLEM=1
+  MISSING_OR_STOPPED=1
 else
   HEALTH="$(container_health)"
   if [ "$HEALTH" = "unhealthy" ]; then
@@ -101,7 +107,9 @@ if [ "$PROBLEM" -eq 1 ]; then
   echo "$FAIL_COUNT" > "$STATE"
 else
   echo "0" > "$STATE"
-  [ -x "$SCRIPT_DIR/metrics-export.sh" ] && "$SCRIPT_DIR/metrics-export.sh" >/dev/null 2>&1 || true
+  if [ -x /usr/local/bin/metrics-export ]; then
+    /usr/local/bin/metrics-export >/dev/null 2>&1 || true
+  fi
   exit 0
 fi
 
@@ -112,20 +120,23 @@ if [ "$FAIL_COUNT" -le "$MAX_STAGE1" ]; then
   else
     docker restart "$CONTAINER" >/dev/null 2>&1 || true
   fi
+
 elif [ "$FAIL_COUNT" -le "$MAX_STAGE2" ]; then
   log_action "Stage 2 → Restart docker (fail_count=$FAIL_COUNT)"
   send_telegram "⚠️ kv1: Stage 2 — docker restart on $(hostname) (fail_count=$FAIL_COUNT)"
   systemctl restart docker >/dev/null 2>&1 || true
+
 elif [ "$FAIL_COUNT" -ge "$MAX_STAGE3" ]; then
   NOW="$(date +%s)"
   if [ -f "$REBOOT_STATE" ]; then
     LAST_REBOOT="$(cat "$REBOOT_STATE" 2>/dev/null || echo 0)"
     DIFF="$((NOW - LAST_REBOOT))"
     if [ "$DIFF" -lt "$REBOOT_COOLDOWN" ]; then
-      log_action "Stage 3 → Reboot skipped (cooldown active)"
+      log_action "Stage 3 → Reboot skipped (cooldown active, ${DIFF}s < ${REBOOT_COOLDOWN}s)"
       exit 0
     fi
   fi
+
   echo "$NOW" > "$REBOOT_STATE"
   log_action "Stage 3 → Reboot server (fail_count=$FAIL_COUNT)"
   send_telegram "🔥 kv1: Stage 3 — reboot on $(hostname) (fail_count=$FAIL_COUNT)"
@@ -133,4 +144,6 @@ elif [ "$FAIL_COUNT" -ge "$MAX_STAGE3" ]; then
   reboot
 fi
 
-[ -x "$SCRIPT_DIR/metrics-export.sh" ] && "$SCRIPT_DIR/metrics-export.sh" >/dev/null 2>&1 || true
+if [ -x /usr/local/bin/metrics-export ]; then
+  /usr/local/bin/metrics-export >/dev/null 2>&1 || true
+fi

@@ -1,10 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Конвертирует /var/log/server-metrics.log -> /home/homepage/www/metrics/data.json
-# Формат входа (одна строка):
-#   2026-03-04T03:10:00+03:00 load=0.25 ram=32 health=healthy
-
 INPUT="/var/log/server-metrics.log"
 OUTPUT="/home/homepage/www/metrics/data.json"
 
@@ -15,7 +11,6 @@ if [ ! -f "$INPUT" ]; then
   exit 0
 fi
 
-# Берём последние 200 точек
 tail -200 "$INPUT" | awk '
 BEGIN { print "["; first=1 }
 {
