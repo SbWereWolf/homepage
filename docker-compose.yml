@@ -8,7 +8,7 @@ services:
 
     # Важно: используем 127.0.0.1 вместо localhost, чтобы не упираться в IPv6 (::1) и ложные "Connection refused"
     healthcheck:
-      test: ["CMD-SHELL", "wget -q --spider http://127.0.0.1/ || exit 1"]
+      test: ["CMD-SHELL", "wget -q --spider --header='Host: kv1.me' http://127.0.0.1/healthz || exit 1"]
       interval: 30s
       timeout: 5s
       retries: 5
