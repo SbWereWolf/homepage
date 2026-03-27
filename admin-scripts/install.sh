@@ -95,11 +95,18 @@ done
 
 systemctl daemon-reload
 
-# enable core units (ignore missing)
-systemctl enable --now kv1.service || true
-systemctl enable --now server-watchdog.timer || true
-systemctl enable --now server-maintenance.timer || true
-systemctl enable --now kv1-deploy.timer || true
+systemctl enable --now \
+  kv1.service \
+  server-watchdog.timer \
+  server-maintenance.timer \
+  kv1-deploy.timer
+
+systemctl start server-watchdog.service kv1-deploy.service || true
+
+systemctl restart \
+  server-watchdog.timer \
+  server-maintenance.timer \
+  kv1-deploy.timer
 
 # cleanup old root-based scripts if exist
 rm -f /root/server-watchdog.sh /root/metrics-export.sh /root/server-maintenance.sh 2>/dev/null || true
