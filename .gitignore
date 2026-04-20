@@ -1,11 +1,12 @@
 /.idea/**
 
-/www/storage/load/**
-!/www/storage/load/.gitkeep
-/www/storage/photo/**
-!/www/storage/photo/.gitkeep
-/src/sb-werewolf-2025/src/out/**
-!/src/sb-werewolf-2025/src/out/.gitkeep
+/www/home/storage/load/**
+!/www/home/storage/load/.gitkeep
+/www/home/storage/photo/**
+!/www/home/storage/photo/.gitkeep
+/home/src/sb-werewolf-2025/src/out/**
+!/home/src/sb-werewolf-2025/src/out/.gitkeep
 
-/src/node_modules/**
-/www/sb-werewolf-2025/**
+/home/src/node_modules/**
+/www/home/sb-werewolf-2025/**
+/tasks/
