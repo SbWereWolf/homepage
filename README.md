@@ -7,7 +7,6 @@
 ## Структура проектов
 
 На одном домене публикуются два независимых статических сайта:
-
 - `https://kv1.me/` — бизнес-визитка;
 - `https://kv1.me/home/` — личный сайт.
 
@@ -33,19 +32,22 @@ www/
 (ради горячей перезагрузки). Исходники лежат в директории `home/src`.
 
 Соответственно:
+
 ```shell
 cd .\home\src
 npm i
 ```
 
-Для того что бы директория `www/home/storage` была доступна из
+Для того чтобы директория `www/home/storage` была доступна из
 `home/src`, надо сделать символьную ссылку (команда для win10):
+
 ```shell
 cd .\home\src
 mklink /D "storage" "..\..\www\home\storage"
 ```
 
 ### Сборка sb-werewolf-2025
+
 Если в директории с исходниками делать `npm run build` 
 (в директории разработки - в `home/src`),
 то Vite вообще всё заливает в директорию `home/src/dist/assets`,
@@ -61,16 +63,18 @@ mklink /D "storage" "..\..\www\home\storage"
 Если нам от Vite была нужна только горячая перезагрузка,
 то `npm run build` использовать не будем.
 
-Будем использовать  `tailwindcss` для генерации CSS из исходников.
+Будем использовать `tailwindcss` для генерации CSS из исходников.
 
 Для этого создадим директорию для результата генерации и
 выполним генерацию:
+
 ```shell
 mkdir .\home\src\sb-werewolf-2025\src\out
 npx @tailwindcss/cli -i ./home/src/sb-werewolf-2025/src/sb-werewolf-2025.css -o ./home/src/sb-werewolf-2025/src/out/sb-werewolf-2025.css
 ```
 
 ### Публикация sb-werewolf-2025
+
 После сборки CSS файла:
 - удаляем всё в `www/home/sb-werewolf-2025`,
 - копируем всё из `home/src/sb-werewolf-2025` в
