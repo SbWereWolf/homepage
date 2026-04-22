@@ -1,0 +1,10 @@
+/* TEAM */
+Name: Nicholas Volkhin
+Role: Systems architect
+Contact: ulfnew@gmail.com
+Telegram: https://t.me/SbWereWolf
+
+/* SITE */
+Language: English, Russian, Spanish, French, Arabic, Hindi,
+Chinese (Simplified)
+Standards: HTML5, Tailwind CSS, structured data, hreflang

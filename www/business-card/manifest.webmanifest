@@ -1,8 +1,26 @@
 {
-    "name": "Николай Вольхин",
-    "short_name": "kv1.me",
-    "start_url": "/",
-    "display": "minimal-ui",
-    "background_color": "#ffffff",
-    "theme_color": "#ffffff"
+  "name": "Nicholas Volkhin — Systems architect",
+  "short_name": "N. Volkhin",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f9fafb",
+  "theme_color": "#1d4ed8",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32 48x48",
+      "type": "image/x-icon"
+    }
+  ]
 }
