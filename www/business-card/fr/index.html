@@ -2,15 +2,12 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-          content="Nicholas Volkhin — architecte système. J’analyse, je conçois et j’aide à mettre en œuvre des sites web, des logiciels, des systèmes d’information, des intégrations et des modèles de données pour des besoins métier réels.">
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="manifest"
-          href="/manifest.webmanifest">
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nicholas Volkhin aide les étudiants, fondateurs, équipes et clients non techniques à transformer des idées floues en exigences, plans, logiciels fonctionnels, modèles de données, intégrations et documentation.">
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="../styles.css">
     <link rel="alternate" hreflang="ru" href="https://kv1.me/ru/">
     <link rel="alternate" hreflang="en" href="https://kv1.me/">
     <link rel="alternate" hreflang="x-default" href="https://kv1.me/">
@@ -19,668 +16,147 @@
     <link rel="alternate" hreflang="ar" href="https://kv1.me/ar/">
     <link rel="alternate" hreflang="hi" href="https://kv1.me/hi/">
     <link rel="alternate" hreflang="zh-Hans" href="https://kv1.me/zh-hans/">
-    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://kv1.me/fr/">
+    <meta name="robots" content="index, follow">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Nicholas Volkhin — Architecte système">
-    <meta property="og:description" content="Nicholas Volkhin — architecte système. J’analyse, je conçois et j’aide à mettre en œuvre des sites web, des logiciels, des systèmes d’information, des intégrations et des modèles de données pour des besoins métier réels.">
+    <meta property="og:title" content="Nicholas Volkhin - Architecte système">
+    <meta property="og:description" content="From simple questions to complex software systems: requirements, software, data, integrations, documentation, and AI-assisted implementation under engineering control.">
     <meta property="og:url" content="https://kv1.me/fr/">
     <meta property="og:site_name" content="Nicholas Volkhin">
-    <meta property="og:image" content="https://kv1.me/portrait.jpg">
+    <meta property="og:image" content="https://kv1.me/og-image.jpg">
     <meta property="og:image:alt" content="Portrait de Nicholas Volkhin">
     <meta property="og:locale" content="fr_FR">
-    <meta property="og:locale:alternate" content="ru_RU">
-    <meta property="og:locale:alternate" content="es_ES">
-    <meta property="og:locale:alternate" content="fr_FR">
-    <meta property="og:locale:alternate" content="ar_AR">
-    <meta property="og:locale:alternate" content="hi_IN">
-    <meta property="og:locale:alternate" content="zh_CN">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Nicholas Volkhin — Architecte système">
-    <meta name="twitter:description" content="Nicholas Volkhin — architecte système. J’analyse, je conçois et j’aide à mettre en œuvre des sites web, des logiciels, des systèmes d’information, des intégrations et des modèles de données pour des besoins métier réels.">
-    <meta name="twitter:image" content="https://kv1.me/portrait.jpg">
-    <meta name="theme-color" content="#1d4ed8">
-    <title>Nicholas Volkhin — Architecte système</title>
+    <meta name="theme-color" content="#9fca32">
+    <title>Nicholas Volkhin - des questions simples aux systèmes logiciels complexes</title>
 </head>
-<body class="bg-gray-50 text-gray-900 antialiased">
-<header class="border-t-4 border-blue-700 bg-white shadow-sm">
-    <div class="mx-auto max-w-6xl px-6 py-5">
-        <div class="flex flex-col gap-4 lg:flex-row lg:items-center
-                    lg:justify-between">
-            <div>
-                <p class="text-sm font-semibold uppercase tracking-wider
-                          text-blue-700">
-                    Nicholas Volkhin
-                </p>
-                <p class="mt-1 text-sm text-gray-600">
-                    Architecte système
-                </p>
+<body>
+<header class="site-header">
+    <div class="mx-auto max-w-7xl px-5 py-5">
+        <div class="header-inner">
+            <div class="brand-block">
+                <a class="brand-link" href="#top">Nicholas Volkhin</a>
+                <p>Architecte système</p>
             </div>
-            <div class="flex flex-col gap-4 lg:items-end">
-                <p class="text-sm font-medium text-gray-600">
-                    Date de publication :
-                    <time datetime="2026-04-21">21 avril 2026</time>
-                </p>
-                <p class="text-sm text-gray-500">
-                    Traduit avec ChatGPT 5.4
-                </p>
-                <nav aria-label="Choix de la langue">
-                    <ul class="flex flex-wrap items-center gap-2">
-                        <li>
-                            <a class="inline-flex min-w-12 items-center
-                               justify-center rounded-lg border
-                               border-gray-300 bg-white px-3 py-2
-                               text-sm font-semibold text-blue-700
-                               hover:border-blue-300 hover:bg-blue-50"
-                               href="/ru/"
-                               lang="ru">
-                                RU
-                            </a>
-                        </li>
-                        <li>
-                            <a class="inline-flex min-w-12 items-center
-                               justify-center rounded-lg border
-                               border-gray-300 bg-white px-3 py-2
-                               text-sm font-semibold text-blue-700
-                               hover:border-blue-300 hover:bg-blue-50"
-                               href="/"
-                               lang="en">
-                                EN
-                            </a>
-                        </li>
-                        <li>
-                            <a class="inline-flex min-w-12 items-center
-                               justify-center rounded-lg border
-                               border-gray-300 bg-white px-3 py-2
-                               text-sm font-semibold text-blue-700
-                               hover:border-blue-300 hover:bg-blue-50"
-                               href="/es/"
-                               lang="es">
-                                ES
-                            </a>
-                        </li>
-                        <li>
-                            <span aria-current="page"
-                                  class="inline-flex min-w-12
-                                         items-center justify-center
-                                         rounded-lg bg-blue-700 px-3
-                                         py-2 text-sm font-semibold
-                                         text-white shadow">
-                                FR
-                            </span>
-                        </li>
-                        <li>
-                            <a class="inline-flex min-w-12 items-center
-                               justify-center rounded-lg border
-                               border-gray-300 bg-white px-3 py-2
-                               text-sm font-semibold text-blue-700
-                               hover:border-blue-300 hover:bg-blue-50"
-                               href="/ar/"
-                               lang="ar">
-                                AR
-                            </a>
-                        </li>
-                        <li>
-                            <a class="inline-flex min-w-12 items-center
-                               justify-center rounded-lg border
-                               border-gray-300 bg-white px-3 py-2
-                               text-sm font-semibold text-blue-700
-                               hover:border-blue-300 hover:bg-blue-50"
-                               href="/hi/"
-                               lang="hi">
-                                HI
-                            </a>
-                        </li>
-                        <li>
-                            <a class="inline-flex min-w-12 items-center
-                               justify-center rounded-lg border
-                               border-gray-300 bg-white px-3 py-2
-                               text-sm font-semibold text-blue-700
-                               hover:border-blue-300 hover:bg-blue-50"
-                               href="/zh-hans/"
-                               lang="zh-Hans">
-                                中文
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            <nav class="main-nav" aria-label="Navigation principale">
+                <ul class="nav-list">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#work">Réalisations</a></li>
+                    <li><a href="#packages">Paquets</a></li>
+                    <li><a href="#writing">Articles</a></li>
+                    <li><a href="#process">Processus</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <nav class="language-nav" aria-label="Choix de la langue">
+                <ul class="language-list">
+                    <li><a href="../ru/" lang="ru">RU</a></li>
+                    <li><a href="../" lang="en">EN</a></li>
+                    <li><a href="../es/" lang="es">ES</a></li>
+                    <li><span aria-current="page">FR</span></li>
+                    <li><a href="../ar/" lang="ar">AR</a></li>
+                    <li><a href="../hi/" lang="hi">HI</a></li>
+                    <li><a href="../zh-hans/" lang="zh-Hans">中文</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
 </header>
 
-<main>
-    <section class="border-b border-blue-100 bg-gradient-to-br
-                    from-blue-50 via-white to-indigo-50">
-        <div class="mx-auto max-w-6xl px-6 py-14 lg:py-20">
-            <div class="rounded-3xl border border-blue-100 bg-white
-                        p-8 shadow-xl lg:p-12">
-                <div class="grid gap-10 lg:grid-cols-3 lg:items-start">
-                    <div class="lg:col-span-2">
-                        <h1 class="mt-4 text-4xl font-extrabold
-                                   tracking-tight text-gray-900
-                                   sm:text-5xl lg:text-6xl">
-                            Nicholas Volkhin
-                        </h1>
-                        <p class="mt-4 text-xl font-semibold
-                                  text-blue-700 sm:text-2xl">
-                            Architecte système
-                        </p>
-                        <p class="mt-6 max-w-4xl text-2xl leading-10
-                                  text-gray-900">
-                            J’analyse, je conçois et j’aide à mettre en œuvre des sites web, des programmes, des systèmes d’information, des intégrations et des modèles de données pour de vrais besoins métiers.
-                        </p>
-                        <p class="mt-6 max-w-4xl text-lg leading-8
-                                  text-gray-700">
-                            J’utilise activement des outils d’AI dans mon travail, ce qui me permet de choisir la pile technologique la plus adaptée à la tâche, plutôt que de rester sur des outils familiers. Mon expérience pratique la plus forte concerne PHP, C#, PostgreSQL et MySQL ; j’ai aussi travaillé avec JS, Python, Delphi, Go, PL/SQL et T-SQL.
-                        </p>
-                        <div class="mt-8 flex flex-wrap gap-4">
-                            <a class="inline-flex items-center
-                               justify-center rounded-lg bg-blue-700
-                               px-5 py-3 text-base font-semibold
-                               text-white shadow hover:bg-blue-800"
-                               href="#contact">
-                                Me contacter
-                            </a>
-                            <a class="inline-flex items-center
-                               justify-center rounded-lg border
-                               border-blue-200 bg-blue-50 px-5 py-3
-                               text-base font-semibold text-blue-700
-                               hover:border-blue-300 hover:bg-white"
-                               href="#proof">
-                                Articles et ressources
-                            </a>
-                        </div>
-                    </div>
-                    <div class="space-y-6">
-                        <figure class="overflow-hidden rounded-2xl
-                                       border border-blue-200 bg-white
-                                       shadow-lg">
-                            <img class="block h-auto w-full"
-                                 src="/portrait.jpg"
-                                 alt="Portrait de Nicholas Volkhin">
-                        </figure>
-                        <aside class="rounded-2xl border border-blue-200
-                                      bg-blue-700 p-6 text-white
-                                      shadow-lg">
-                        <h2 class="text-lg font-bold">
-                            Dans quels cas je suis utile
-                        </h2>
-                        <ul class="mt-4 space-y-3 text-base leading-7
-                                   text-blue-50">
-                            <li>— lorsqu’il faut clarifier la tâche et les exigences ;</li>
-                            <li>— lorsqu’il faut concevoir un système ou une intégration ;</li>
-                            <li>— lorsqu’il faut remettre de l’ordre dans les données ;</li>
-                            <li>— lorsqu’il faut simplifier et accélérer une solution existante.</li>
-                        </ul>
-                    
-                        </aside>
-                    </div>
-                </div>
-                <nav aria-label="Navigation principale" class="mt-10">
-                    <ul class="flex flex-wrap gap-3">
-                        <li>
-                            <a class="inline-flex rounded-full border
-                               border-blue-200 bg-white px-4 py-2
-                               text-sm font-semibold text-blue-700
-                               shadow-sm hover:bg-blue-50"
-                               href="#about">
-                                À propos
-                            </a>
-                        </li>
-                        <li>
-                            <a class="inline-flex rounded-full border
-                               border-blue-200 bg-white px-4 py-2
-                               text-sm font-semibold text-blue-700
-                               shadow-sm hover:bg-blue-50"
-                               href="#services">
-                                Ce que je peux apporter
-                            </a>
-                        </li>
-                        <li>
-                            <a class="inline-flex rounded-full border
-                               border-blue-200 bg-white px-4 py-2
-                               text-sm font-semibold text-blue-700
-                               shadow-sm hover:bg-blue-50"
-                               href="#approach">
-                                Ma manière de travailler
-                            </a>
-                        </li>
-                        <li>
-                            <a class="inline-flex rounded-full border
-                               border-blue-200 bg-white px-4 py-2
-                               text-sm font-semibold text-blue-700
-                               shadow-sm hover:bg-blue-50"
-                               href="#proof">
-                                Articles et ressources
-                            </a>
-                        </li>
-                        <li>
-                            <a class="inline-flex rounded-full border
-                               border-blue-200 bg-white px-4 py-2
-                               text-sm font-semibold text-blue-700
-                               shadow-sm hover:bg-blue-50"
-                               href="#reviews">
-                                Avis
-                            </a>
-                        </li>
-                        <li>
-                            <a class="inline-flex rounded-full border
-                               border-blue-200 bg-white px-4 py-2
-                               text-sm font-semibold text-blue-700
-                               shadow-sm hover:bg-blue-50"
-                               href="#contact">
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="mx-auto max-w-6xl px-6 py-16">
-        <div class="grid gap-8 lg:grid-cols-3">
-            <div class="lg:col-span-2 rounded-3xl border
-                        border-gray-200 bg-white p-8 shadow-sm">
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900">
-                    À propos
-                </h2>
-                <div class="mt-6 space-y-5 text-lg leading-8 text-gray-700">
-                    <p>J’interviens généralement dans des tâches où écrire du code ne suffit pas : il faut d’abord comprendre le besoin réel, vérifier comment la solution fonctionnera en pratique et trouver la limite entre une architecture utile et une complexité inutile.</p>
-                    <p>Il peut s’agir d’un nouveau projet, d’une refonte d’une solution existante, d’une intégration entre systèmes, de la conception d’un modèle de données, de l’analyse de goulots d’étranglement ou de la préparation d’une spécification technique claire pour une équipe.</p>
-                    <p>Je privilégie une approche d’ingénierie : comprendre la tâche, choisir une architecture raisonnable, tenir compte des contraintes et amener la solution à un état opérationnel.</p>
+<main id="top">
+    <section class="hero-section">
+        <div class="mx-auto grid max-w-7xl gap-10 px-5 py-14 lg:grid-cols-12 lg:items-center lg:py-20">
+            <div class="lg:col-span-7">
+                <p class="eyebrow">Architecte système pour systèmes riches en données et intégrations</p>
+                <h1>Des questions simples aux systèmes logiciels complexes</h1>
+                <p class="hero-lead">J’aide les étudiants, fondateurs, équipes et clients non techniques à transformer des idées floues en exigences claires, plans pratiques, logiciels fonctionnels, modèles de données, intégrations et documentation.</p>
+                <p class="mt-5 max-w-3xl text-lg leading-8">Vous pouvez venir avec une demande de conseil, un projet étudiant, une idée sans cahier des charges, une landing page, une automatisation, un système complexe, une intégration ou un problème de données. J’aide à clarifier la prochaine étape technique utile.</p>
+                <p class="ai-note mt-6">J’utilise l’AI pour accélérer le développement, la recherche, les tests et la routine, tout en gardant l’architecture, la responsabilité et la vérification sous contrôle d’ingénierie.</p>
+                <div class="mt-8 flex flex-wrap gap-3">
+                    <a class="action-link action-link--primary" href="#contact">Me contacter</a>
+                    <a class="action-link" href="#work">Voir les travaux</a>
+                    <button class="action-button" type="button" onclick="downloadContactCard()"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 19h14"/></svg>Télécharger le contact</button>
+                    <a id="contactCardLink" class="sr-only" href="../contact.vcf" download>Télécharger le contact</a>
                 </div>
             </div>
-            <aside class="rounded-3xl border border-blue-200 bg-blue-50
-                          p-8 shadow-sm">
-                <h2 class="text-xl font-bold text-gray-900">
-                    Dans quels cas on me contacte
-                </h2>
-                <ul class="mt-5 space-y-4 text-base leading-7 text-gray-700">
-                    <li>— il faut clarifier la tâche et les exigences ;</li>
-                    <li>— il faut concevoir un système ou une intégration ;</li>
-                    <li>— il faut structurer les données ;</li>
-                    <li>— il faut simplifier et accélérer une solution actuelle ;</li>
-                    <li>— il faut transformer une idée en résultat opérationnel.</li>
-                </ul>
+            <aside class="hero-panel lg:col-span-5">
+                <img class="portrait" src="../portrait.jpg" alt="Portrait de Nicholas Volkhin">
+                <div><h2>Solide expérience pratique</h2><p>PHP, SQL, PostgreSQL, MySQL, XML, intégrations, systèmes backend, documentation et architecture pragmatique.</p></div>
             </aside>
         </div>
     </section>
 
-    <section id="services" class="border-y border-gray-200 bg-gray-100">
-        <div class="mx-auto max-w-6xl px-6 py-16">
-            <h2 class="text-3xl font-bold tracking-tight text-gray-900">
-                Ce que je peux apporter
-            </h2>
-            <div class="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-                <article class="rounded-3xl border-t-4 border-blue-600
-                                bg-white p-6 shadow-md">
-                    <h3 class="text-xl font-bold text-gray-900">
-                        Analyse système
-                    </h3>
-                    <p class="mt-3 text-base leading-7 text-gray-700">
-                        J’aide à clarifier l’objectif, les contraintes, les exigences et le résultat attendu pour que l’équipe travaille sur un problème clair et non sur un ensemble d’hypothèses.
-                    </p>
-                </article>                <article class="rounded-3xl border-t-4 border-indigo-200
-                                bg-white p-6 shadow-md">
-                    <h3 class="text-xl font-bold text-gray-900">
-                        Architecture du système
-                    </h3>
-                    <p class="mt-3 text-base leading-7 text-gray-700">
-                        Je conçois la composition du système, les frontières des modules, les interactions entre les parties, les intégrations et les règles de traitement des données.
-                    </p>
-                </article>                <article class="rounded-3xl border-t-4 border-indigo-200
-                                bg-white p-6 shadow-md">
-                    <h3 class="text-xl font-bold text-gray-900">
-                        Modèles de données
-                    </h3>
-                    <p class="mt-3 text-base leading-7 text-gray-700">
-                        Je choisis la structure de stockage, la logique des relations, les index, les contraintes et l’approche des données selon les scénarios réels d’utilisation.
-                    </p>
-                </article>                <article class="rounded-3xl border-t-4 border-indigo-200
-                                bg-white p-6 shadow-md">
-                    <h3 class="text-xl font-bold text-gray-900">
-                        Intégrations
-                    </h3>
-                    <p class="mt-3 text-base leading-7 text-gray-700">
-                        API, XML, SOAP, import, export, échanges entre systèmes, chargement de gros volumes de données et mise au bon format.
-                    </p>
-                </article>                <article class="rounded-3xl border-t-4 border-indigo-200
-                                bg-white p-6 shadow-md">
-                    <h3 class="text-xl font-bold text-gray-900">
-                        Amélioration et refactorisation
-                    </h3>
-                    <p class="mt-3 text-base leading-7 text-gray-700">
-                        J’analyse la solution existante, j’identifie les points faibles, je propose une structure plus simple et j’aide à appliquer les changements sans bruit inutile.
-                    </p>
-                </article>                <article class="rounded-3xl border-t-4 border-blue-600
-                                bg-white p-6 shadow-md">
-                    <h3 class="text-xl font-bold text-gray-900">
-                        Mise en œuvre
-                    </h3>
-                    <p class="mt-3 text-base leading-7 text-gray-700">
-                        Je peux non seulement concevoir la solution, mais aussi participer à sa mise en œuvre, seul ou avec votre équipe.
-                    </p>
+    <section class="section-wrap" aria-labelledby="contact-reasons-title"><div class="mx-auto max-w-7xl px-5 py-14"><div class="section-heading"><p class="eyebrow">Quand me contacter</p><h2 id="contact-reasons-title">Utile même avant que la tâche soit complètement formulée</h2></div><div class="reason-grid"><article>Vous avez une idée, mais pas encore de cahier des charges</article><article>Vous devez transformer des souhaits en exigences SMART</article><article>Vous êtes étudiant et avez besoin d’un accompagnement technique</article><article>Vous avez besoin d’une landing page ou d’un site pour petite entreprise</article><article>Vous avez des problèmes XML, Excel, API, SQL ou base de données</article><article>Vous avez besoin d’un développeur qui clarifie, conçoit et réalise</article></div></div></section>
+
+    <section id="services" class="section-wrap section-wrap--muted" aria-labelledby="services-title"><div class="mx-auto max-w-7xl px-5 py-14"><div class="section-heading"><p class="eyebrow">Services</p><h2 id="services-title">Ce que je peux faire</h2></div><div class="service-grid"><article><h3>Conseil et clarification des exigences</h3><p>Clarifier objectifs, limites, risques, utilisateurs et définition pratique du terminé.</p></article><article><h3>Spécifications techniques et manuels utilisateur</h3><p>Transformer des souhaits flous en documents utilisables par clients, équipes et prestataires.</p></article><article><h3>Landing pages et sites professionnels</h3><p>Structurer offres, fiches produit, FAQ, contacts et pages claires pour de vrais acheteurs.</p></article><article><h3>Backend et développement d’applications web</h3><p>Construire logique serveur, outils admin, flux de données et composants maintenables.</p></article><article><h3>Modèles de données, SQL, PostgreSQL, XML, imports XLSX</h3><p>Concevoir le stockage, importer des fichiers, parser des données structurées et préparer des rapports.</p></article><article><h3>API et workflows d’intégration</h3><p>Connecter les systèmes via REST, SOAP, XML, JSON, files et étapes CLI.</p></article><article><h3>Refactoring, diagnostic, performance, maintenabilité</h3><p>Trouver les faiblesses, simplifier la structure, améliorer la vitesse et faciliter les changements.</p></article></div></div></section>
+
+    <section id="work" class="section-wrap" aria-labelledby="work-title"><div class="mx-auto max-w-7xl px-5 py-14"><div class="section-heading"><p class="eyebrow">Réalisations choisies</p><h2 id="work-title">Exemples de portfolio à examiner</h2><p>D’abord les exemples orientés métier, puis les travaux d’ingénierie plus profonds.</p></div><div class="portfolio-list">
+                <article class="portfolio-card">
+                    <button class="portfolio-card__media image-trigger" type="button" data-full-src="../assets/work/full/teacher-plan-builder.webp" data-alt="Teacher Plan Builder preview">
+                        <img src="../assets/work/teacher-plan-builder.webp" alt="Teacher Plan Builder preview" loading="lazy">
+                    </button>
+                    <div class="portfolio-card__body"><h3>Teacher Plan Builder</h3><p>Produit de planification pédagogique avec landing page, planification des cours et unités, calendrier mensuel, fiches de travail et UX orientée enseignants.</p><p class="portfolio-card__tags">Landing · Éducation · UX</p><a href="https://teacherplanbuilder.com/" target="_blank" rel="noopener noreferrer">Ouvrir Teacher Plan Builder</a></div>
                 </article>
-            </div>
-        </div>
-    </section>
-
-    <section id="approach" class="mx-auto max-w-6xl px-6 py-16">
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900">
-            Ma manière de travailler
-        </h2>
-        <div class="mt-8 grid gap-6 lg:grid-cols-3">
-            <article class="rounded-3xl border border-gray-200 bg-white
-                            p-8 shadow-sm">
-                <div class="inline-flex h-12 w-12 items-center justify-center
-                            rounded-full bg-blue-700 text-lg font-bold
-                            text-white shadow">
-                    1
-                </div>
-                <h3 class="mt-5 text-xl font-bold text-gray-900">
-                    Je comprends la tâche
-                </h3>
-                <p class="mt-3 text-base leading-7 text-gray-700">
-                    Je clarifie l’objectif, les contraintes, les risques, la situation actuelle et les signes qui montreront que la tâche est bien résolue.
-                </p>
-            </article>            <article class="rounded-3xl border border-gray-200 bg-white
-                            p-8 shadow-sm">
-                <div class="inline-flex h-12 w-12 items-center justify-center
-                            rounded-full bg-blue-700 text-lg font-bold
-                            text-white shadow">
-                    2
-                </div>
-                <h3 class="mt-5 text-xl font-bold text-gray-900">
-                    Je propose la structure de la solution
-                </h3>
-                <p class="mt-3 text-base leading-7 text-gray-700">
-                    Je montre comment découper le système, organiser les données et les intégrations, et définir les étapes et priorités.
-                </p>
-            </article>            <article class="rounded-3xl border border-gray-200 bg-white
-                            p-8 shadow-sm">
-                <div class="inline-flex h-12 w-12 items-center justify-center
-                            rounded-full bg-blue-700 text-lg font-bold
-                            text-white shadow">
-                    3
-                </div>
-                <h3 class="mt-5 text-xl font-bold text-gray-900">
-                    J’aide à obtenir un résultat
-                </h3>
-                <p class="mt-3 text-base leading-7 text-gray-700">
-                    J’aide à transformer le schéma en solution opérationnelle sans perdre le sens de la tâche : sans cosmétique architecturale inutile et sans technologie pour la technologie.
-                </p>
-            </article>
-        </div>
-    </section>
-
-    <section id="proof" class="border-y border-blue-100 bg-blue-50">
-        <div class="mx-auto max-w-6xl px-6 py-16">
-            <div class="max-w-4xl">
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900">
-                    Articles et ressources
-                </h2>
-                <p class="mt-4 text-lg leading-8 text-gray-700">
-                    Quelques ressources qui permettent de comprendre rapidement ma manière d’aborder les données, XML, SQL, les bibliothèques et le développement appliqué.
-                </p>
-            </div>
-            <div class="mt-8 grid gap-6 lg:grid-cols-2">
-                <article class="rounded-3xl border border-blue-200
-                                bg-white p-6 shadow-sm">
-                    <h3 class="text-xl font-bold text-gray-900">
-                        <a class="text-blue-700 underline
-                           decoration-blue-300 underline-offset-4"
-                           href="https://habr.com/ru/articles/712106/"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            Travailler avec XML comme avec un tableau, version 2
-                        </a>
-                    </h3>
-                    <p class="mt-3 text-base leading-7 text-gray-700">
-                        Article sur l’analyse en flux de gros fichiers XML avec XMLReader et yield. Utile lorsqu’il faut traiter de gros exports sans surcharge mémoire.
-                    </p>
-                </article>                <article class="rounded-3xl border border-blue-200
-                                bg-white p-6 shadow-sm">
-                    <h3 class="text-xl font-bold text-gray-900">
-                        <a class="text-blue-700 underline
-                           decoration-blue-300 underline-offset-4"
-                           href="https://habr.com/ru/articles/714804/"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            Importer la base complète FIAS en 9 heures, mode d’emploi
-                        </a>
-                    </h3>
-                    <p class="mt-3 text-base leading-7 text-gray-700">
-                        Retour d’expérience sur le traitement d’un grand ensemble XML FIAS, la parallélisation du traitement et le chargement des données dans PostgreSQL.
-                    </p>
-                </article>                <article class="rounded-3xl border border-blue-200
-                                bg-white p-6 shadow-sm">
-                    <h3 class="text-xl font-bold text-gray-900">
-                        <a class="text-blue-700 underline
-                           decoration-blue-300 underline-offset-4"
-                           href="https://habr.com/ru/articles/566096/"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            Le catalogue idéal, une bibliothèque de base
-                        </a>
-                    </h3>
-                    <p class="mt-3 text-base leading-7 text-gray-700">
-                        Article sur une bibliothèque de travail avec EAV et sur la manière d’organiser des données souples sans transformer le système en chaos.
-                    </p>
-                </article>                <article class="rounded-3xl border border-blue-200
-                                bg-white p-6 shadow-sm">
-                    <h3 class="text-xl font-bold text-gray-900">
-                        <a class="text-blue-700 underline
-                           decoration-blue-300 underline-offset-4"
-                           href="https://github.com/SbWereWolf/xml-navigator"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            xml-navigator / XmlExtractKit
-                        </a>
-                    </h3>
-                    <p class="mt-3 text-base leading-7 text-gray-700">
-                        Bibliothèque publique pour les tâches XML courantes : sélection des nœuds utiles, traitement en flux et conversion du XML en tableaux PHP classiques.
-                    </p>
-                </article>                <article class="rounded-3xl border border-blue-200
-                                bg-white p-6 shadow-sm lg:col-span-2">
-                    <h3 class="text-xl font-bold text-gray-900">
-                        <a class="text-blue-700 underline
-                           decoration-blue-300 underline-offset-4"
-                           href="https://github.com/SbWereWolf/storage-for-all-things"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            storage-for-all-things / EAV Manager
-                        </a>
-                    </h3>
-                    <p class="mt-3 text-base leading-7 text-gray-700">
-                        Dépôt et bibliothèque consacrés à EAV, aux structures de données et au travail pratique avec des catalogues et des entités flexibles.
-                    </p>
+                <article class="portfolio-card">
+                    <button class="portfolio-card__media image-trigger" type="button" data-full-src="../assets/work/full/rzd-vsem.webp" data-alt="RZD-vsem landing preview">
+                        <img src="../assets/work/rzd-vsem.webp" alt="RZD-vsem landing preview" loading="lazy">
+                    </button>
+                    <div class="portfolio-card__body"><h3>RZD-vsem landing</h3><p>Landing/catalogue pour pièces de toilettes ferroviaires en acier inoxydable, avec offre, fiches produit, livraison, FAQ et contacts.</p><p class="portfolio-card__tags">Landing · Catalogue · B2B</p><a href="http://rzhd-vsem.ru/" target="_blank" rel="noopener noreferrer">Ouvrir RZD-vsem landing</a></div>
                 </article>
-            </div>
-            <div class="mt-8 flex flex-wrap gap-4">
-                <a class="inline-flex items-center rounded-lg
-                   border border-blue-200 bg-white px-4 py-3 text-base
-                   font-semibold text-blue-700 shadow-sm
-                   hover:bg-blue-100"
-                   href="https://habr.com/ru/users/SbWereWolf/posts/"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Tous les articles sur Habr
-                </a>
-                <a class="inline-flex items-center rounded-lg
-                   border border-blue-200 bg-white px-4 py-3 text-base
-                   font-semibold text-blue-700 shadow-sm
-                   hover:bg-blue-100"
-                   href="https://github.com/SbWereWolf"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Profil GitHub
-                </a>
-                <a class="inline-flex items-center rounded-lg
-                   border border-blue-200 bg-white px-4 py-3 text-base
-                   font-semibold text-blue-700 shadow-sm
-                   hover:bg-blue-100"
-                   href="https://packagist.org/packages/sbwerewolf/"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Paquets sur Packagist
-                </a>
-            </div>
-        </div>
-    </section>
+                <article class="portfolio-card"><div class="portfolio-card__media doc-card-grid"><article><button class="image-trigger" type="button" data-full-src="../assets/work/full/docs-migration.webp" data-alt="Instruction de migration SQL Server vers MySQL preview"><img src="../assets/work/docs-migration.webp" alt="Instruction de migration SQL Server vers MySQL preview" loading="lazy"></button><h4>Instruction de migration SQL Server vers MySQL</h4><p>Guide de migration pour utilisateurs.</p><a href="https://docs.google.com/document/d/1XcFTyk-R32Q4LXPPVPJAvSYFIQ_dqAZFST6KW3yLVv0/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Ouvrir le document</a></article><article><button class="image-trigger" type="button" data-full-src="../assets/work/full/docs-spec.webp" data-alt="Spécification pour planification de ligne de production preview"><img src="../assets/work/docs-spec.webp" alt="Spécification pour planification de ligne de production preview" loading="lazy"></button><h4>Spécification pour planification de ligne de production</h4><p>Exigences structurées et règles de processus.</p><a href="https://docs.google.com/document/d/1v9kMto-bRZB78v_-KPBtnhTV4fkL2qItZByXKrGyc4s/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Ouvrir le document</a></article><article><button class="image-trigger" type="button" data-full-src="../assets/work/full/docs-data-model.webp" data-alt="Modèle de données des relevés de compteurs preview"><img src="../assets/work/docs-data-model.webp" alt="Modèle de données des relevés de compteurs preview" loading="lazy"></button><h4>Modèle de données des relevés de compteurs</h4><p>Entités de données et relations.</p><a href="https://docs.google.com/document/d/1ZBt46HY200Gdd1kjUV5-sBl01ZVT5k4t/edit?usp=sharing&ouid=103198310283058921775&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">Ouvrir le document</a></article><article><button class="image-trigger" type="button" data-full-src="../assets/work/full/docs-user-manual.webp" data-alt="Manuel utilisateur du système de placement publicitaire preview"><img src="../assets/work/docs-user-manual.webp" alt="Manuel utilisateur du système de placement publicitaire preview" loading="lazy"></button><h4>Manuel utilisateur du système de placement publicitaire</h4><p>Guide opérationnel pour utilisateurs finaux.</p><a href="https://docs.google.com/document/d/11HDloqp4izi4T6ERK2QhSI5uWq7FExDensulk99G9xw/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Ouvrir le document</a></article></div><div class="portfolio-card__body"><h3>Exemples de documentation technique</h3><p>Quatre exemples de rédaction technique claire : instructions, exigences, modélisation de données et documentation utilisateur.</p><p class="portfolio-card__tags">Docs · Exigences · Manuels</p></div></article>
+                <article class="portfolio-card">
+                    <button class="portfolio-card__media image-trigger" type="button" data-full-src="../assets/work/full/autoteka.webp" data-alt="Autoteka preview">
+                        <img src="../assets/work/autoteka.webp" alt="Autoteka preview" loading="lazy">
+                    </button>
+                    <div class="portfolio-card__body"><h3>Autoteka</h3><p>Projet full-stack construit avec assistance AI : frontend, backend, infrastructure, documentation, cas de test et workflow agent explicite.</p><p class="portfolio-card__tags">AI-assisted · Full-stack · Tests</p><a href="https://github.com/SbWereWolf/autoteka" target="_blank" rel="noopener noreferrer">Ouvrir Autoteka</a></div>
+                </article>
+                <article class="portfolio-card"><button class="portfolio-card__media image-trigger" type="button" data-full-src="../assets/work/full/storage-for-all-things.webp" data-alt="storage-for-all-things EAV architecture preview"><img src="../assets/work/storage-for-all-things.webp" alt="storage-for-all-things EAV architecture preview" loading="lazy"></button><div class="portfolio-card__body"><h3>storage-for-all-things</h3><p>Architecture EAV/catalogue pour données structurées flexibles, attributs arbitraires, entités recherchables et accès rapide via structures préparées.</p><p class="portfolio-card__tags">Architecture · EAV · SQL</p><a href="https://github.com/SbWereWolf/storage-for-all-things" target="_blank" rel="noopener noreferrer">Ouvrir storage-for-all-things</a><h4 class="related-title">Série Habr liée</h4><ul class="related-links"><li><a href="https://habr.com/ru/articles/322930/" target="_blank" rel="noopener noreferrer">2017-03-01 · Catalogue idéal : esquisse d’architecture</a></li><li><a href="https://habr.com/ru/articles/323498/" target="_blank" rel="noopener noreferrer">2017-03-09 · Catalogue idéal : variante d’implémentation</a></li><li><a href="https://habr.com/ru/articles/343776/" target="_blank" rel="noopener noreferrer">2017-12-03 · Catalogue idéal : optimisation de sélection</a></li><li><a href="https://habr.com/ru/articles/566096/" target="_blank" rel="noopener noreferrer">2021-06-23 · Catalogue idéal : bibliothèque de base</a></li><li><a href="https://habr.com/ru/articles/599559/" target="_blank" rel="noopener noreferrer">2022-01-11 · Catalogue idéal : mesures de performance</a></li><li><a href="https://habr.com/ru/articles/599639/" target="_blank" rel="noopener noreferrer">2022-01-12 · Catalogue idéal : exemple d’utilisation</a></li></ul></div></article>
+                <article class="portfolio-card">
+                    <button class="portfolio-card__media image-trigger" type="button" data-full-src="../assets/work/full/ips-gateway.webp" data-alt="IpsGateway preview">
+                        <img src="../assets/work/ips-gateway.webp" alt="IpsGateway preview" loading="lazy">
+                    </button>
+                    <div class="portfolio-card__body"><h3>IpsGateway</h3><p>Prototype de passerelle de paiement style UNIX en C# : petits outils CLI pour lire les messages, parser ISO 20022 XML, transformer les payloads, journaliser et tester chaque étape séparément.</p><p class="portfolio-card__tags">C# · CLI · ISO 20022</p><a href="https://github.com/SbWereWolf/ips-gateway" target="_blank" rel="noopener noreferrer">Ouvrir IpsGateway</a></div>
+                </article>
+                <article class="portfolio-card">
+                    <button class="portfolio-card__media image-trigger" type="button" data-full-src="../assets/work/full/hexviewer.webp" data-alt="HexViewer preview">
+                        <img src="../assets/work/hexviewer.webp" alt="HexViewer preview" loading="lazy">
+                    </button>
+                    <div class="portfolio-card__body"><h3>HexViewer</h3><p>Utilitaire desktop C# pour fichiers binaires avec offsets, vues hex/décimal/binaire, représentation ASCII, défilement et recherche de séquences d’octets.</p><p class="portfolio-card__tags">C# · WPF · Données binaires</p><a href="https://github.com/SbWereWolf/HexViewer" target="_blank" rel="noopener noreferrer">Ouvrir HexViewer</a></div>
+                </article>
+                <article class="portfolio-card">
+                    <button class="portfolio-card__media image-trigger" type="button" data-full-src="../assets/work/full/xlsx-importer.webp" data-alt="xlsx-importer preview">
+                        <img src="../assets/work/xlsx-importer.webp" alt="xlsx-importer preview" loading="lazy">
+                    </button>
+                    <div class="portfolio-card__body"><h3>xlsx-importer</h3><p>Application Laravel CLI pour importer des données XLSX et préparer des rapports de maintenance de points d’accès Wi‑Fi dans des pavillons d’attente à Moscou.</p><p class="portfolio-card__tags">Laravel · CLI · XLSX</p><a href="https://github.com/SbWereWolf/xlsx-importer" target="_blank" rel="noopener noreferrer">Ouvrir xlsx-importer</a></div>
+                </article>
+            </div></div></section>
 
-    <section id="reviews" class="mx-auto max-w-6xl px-6 py-16">
-        <div class="flex flex-col gap-8 lg:flex-row lg:items-start
-                    lg:justify-between">
-            <div class="max-w-3xl">
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900">
-                    Avis
-                </h2>
-                <p class="mt-4 text-lg leading-8 text-gray-700">
-                    Des avis sur mon travail sont disponibles sur Profi.ru. Voici quelques courtes citations ; le lien permet d’ouvrir la page complète des avis.
-                </p>
-            </div>
-            <div class="flex flex-wrap gap-4">
-                <a class="inline-flex items-center justify-center
-                   rounded-lg bg-blue-700 px-5 py-3 text-base
-                   font-semibold text-white shadow hover:bg-blue-800"
-                   href="https://profi.ru/profile/VolhinNM/"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Profil Profi.ru
-                </a>
-                <a class="inline-flex items-center justify-center
-                   rounded-lg border border-blue-200 bg-white px-5
-                   py-3 text-base font-semibold text-blue-700
-                   shadow-sm hover:border-blue-300 hover:bg-blue-50"
-                   href="https://profi.ru/profile/VolhinNM/reviews/"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Page des avis
-                </a>
-            </div>
-        </div>
-        <div class="mt-8 grid gap-6 md:grid-cols-3">
-            <blockquote class="rounded-3xl border-l-4 border-blue-600
-                               bg-white p-6 shadow-md">
-                <p class="text-lg font-semibold leading-8 text-gray-900">
-                    « Réponse rapide et aide claire pour comprendre le problème. »
-                </p>
-                <footer class="mt-4 text-sm text-gray-600">
-                    Maria, 3 novembre 2024
-                </footer>
-            </blockquote>
-            <blockquote class="rounded-3xl border-l-4 border-blue-600
-                               bg-white p-6 shadow-md">
-                <p class="text-lg font-semibold leading-8 text-gray-900">
-                    « Tout était compétent et précis. »
-                </p>
-                <footer class="mt-4 text-sm text-gray-600">
-                    Alexey, 5 juin 2020
-                </footer>
-            </blockquote>
-            <blockquote class="rounded-3xl border-l-4 border-blue-600
-                               bg-white p-6 shadow-md">
-                <p class="text-lg font-semibold leading-8 text-gray-900">
-                    « Il a expliqué en détail le fonctionnement de l’algorithme. »
-                </p>
-                <footer class="mt-4 text-sm text-gray-600">
-                    Nikita, 1 juin 2020
-                </footer>
-            </blockquote>
-        </div>
-    </section>
+    <section id="packages" class="section-wrap section-wrap--muted" aria-labelledby="packages-title"><div class="mx-auto max-w-7xl px-5 py-14"><div class="section-heading"><p class="eyebrow">Paquets</p><h2 id="packages-title">Outils PHP réutilisables</h2></div><div class="three-grid"><article class="compact-card"><button class="image-trigger compact-card__image" type="button" data-full-src="../assets/work/full/pkg-language-specific.webp" data-alt="sbwerewolf/language-specific Packagist README preview"><img src="../assets/work/pkg-language-specific.webp" alt="sbwerewolf/language-specific Packagist README preview" loading="lazy"></button><h3>sbwerewolf/language-specific</h3><p>Accès sûr aux tableaux imbriqués et conversion prévisible des valeurs en PHP.</p><a href="https://packagist.org/packages/sbwerewolf/language-specific" target="_blank" rel="noopener noreferrer">Ouvrir sur Packagist</a></article><article class="compact-card"><button class="image-trigger compact-card__image" type="button" data-full-src="../assets/work/full/pkg-xml-navigator.webp" data-alt="sbwerewolf/xml-navigator Packagist README preview"><img src="../assets/work/pkg-xml-navigator.webp" alt="sbwerewolf/xml-navigator Packagist README preview" loading="lazy"></button><h3>sbwerewolf/xml-navigator</h3><p>Extraction XML en streaming vers des tableaux PHP simples.</p><a href="https://packagist.org/packages/sbwerewolf/xml-navigator" target="_blank" rel="noopener noreferrer">Ouvrir sur Packagist</a></article><article class="compact-card"><button class="image-trigger compact-card__image" type="button" data-full-src="../assets/work/full/pkg-fias-gar.webp" data-alt="sbwerewolf/fias-gar-data-import-tool Packagist README preview"><img src="../assets/work/pkg-fias-gar.webp" alt="sbwerewolf/fias-gar-data-import-tool Packagist README preview" loading="lazy"></button><h3>sbwerewolf/fias-gar-data-import-tool</h3><p>Outil d’import FIAS GAR pour import initial et mises à jour.</p><a href="https://packagist.org/packages/sbwerewolf/fias-gar-data-import-tool" target="_blank" rel="noopener noreferrer">Ouvrir sur Packagist</a></article></div></div></section>
 
-    <section id="contact" class="bg-gray-900 text-white">
-        <div class="mx-auto max-w-6xl px-6 py-16">
-            <div class="max-w-4xl">
-                <h2 class="text-3xl font-bold tracking-tight">
-                    Contact
-                </h2>
-                <p class="mt-4 text-lg leading-8 text-gray-300">
-                    Si vous avez une tâche qu’il faut clarifier, concevoir ou mener à un résultat opérationnel, écrivez-moi par le canal qui vous convient.
-                </p>
-            </div>
-            <div class="mt-8 rounded-3xl border border-gray-700
-                        bg-gray-800/80 p-6 shadow-md">
-                <p class="text-base leading-7 text-gray-300">
-                    Si cela vous convient mieux, vous pouvez enregistrer ma fiche de contact et revenir à la conversation plus tard.
-                </p>
-                <div class="mt-4">
-                    <a class="inline-flex items-center justify-center
-                       rounded-lg border border-blue-300 bg-blue-50
-                       px-5 py-3 text-base font-semibold text-blue-700
-                       shadow-sm hover:border-blue-200 hover:bg-white"
-                       href="/contact.vcf"
-                       download>
-                        Enregistrer le contact (vCard)
-                    </a>
-                </div>
-            </div>
+    <section id="writing" class="section-wrap" aria-labelledby="writing-title"><div class="mx-auto max-w-7xl px-5 py-14"><div class="section-heading"><p class="eyebrow">Écrits et ressources publiques</p><h2 id="writing-title">Explications publiques et notes techniques</h2><p>Lisez-moi sur ces plateformes.</p></div><div class="platform-links"><a class="platform-link platform-link--primary" href="https://habr.com/ru/users/SbWereWolf/articles/" target="_blank" rel="noopener noreferrer"><span class="platform-logo" aria-hidden="true">H</span>Habr</a><a class="platform-link" href="https://dev.to/sbwerewolf" target="_blank" rel="noopener noreferrer"><span class="platform-logo" aria-hidden="true">DEV</span>Dev.to</a><a class="platform-link" href="https://sb-werewolf.hashnode.dev/" target="_blank" rel="noopener noreferrer"><span class="platform-logo" aria-hidden="true">#</span>Hashnode</a><a class="platform-link" href="https://medium.com/@sbwerewolf" target="_blank" rel="noopener noreferrer"><span class="platform-logo" aria-hidden="true">M</span>Medium</a></div><h3 class="subsection-title">Articles les plus intéressants</h3><div class="article-grid"><article class="article-card"><strong><a href="https://habr.com/ru/articles/476102/" target="_blank" rel="noopener noreferrer">Accès type-safe aux tableaux PHP</a></strong><span>Article à l’origine du paquet sur la gestion explicite des valeurs.</span><span class="article-meta"><span aria-label="Date de publication"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v3M17 3v3M4 9h16M5 5h14v15H5z"/></svg>2019-11-16</span><span aria-label="Note Habr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 5 7 10H5z"/></svg>+2</span><span aria-label="Commentaires"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H8l-3 4z"/></svg>66</span></span></article><article class="article-card"><strong><a href="https://habr.com/ru/articles/278595/" target="_blank" rel="noopener noreferrer">SQL report builder : l’idée</a></strong><span>Idée pratique pour construire des rapports en SQL.</span><span class="article-meta"><span aria-label="Date de publication"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v3M17 3v3M4 9h16M5 5h14v15H5z"/></svg>2016-03-04</span><span aria-label="Note Habr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 5 7 10H5z"/></svg>+2</span><span aria-label="Commentaires"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H8l-3 4z"/></svg>4</span></span></article><article class="article-card"><strong><a href="https://habr.com/ru/articles/316820/" target="_blank" rel="noopener noreferrer">Petit comparatif d’hébergement VDS</a></strong><span>Comparatif pratique d’infrastructure chez plusieurs hébergeurs.</span><span class="article-meta"><span aria-label="Date de publication"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v3M17 3v3M4 9h16M5 5h14v15H5z"/></svg>2016-12-04</span><span aria-label="Note Habr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 5 7 10H5z"/></svg>+1</span><span aria-label="Commentaires"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H8l-3 4z"/></svg>42</span></span></article><article class="article-card"><strong><a href="https://habr.com/ru/articles/714804/" target="_blank" rel="noopener noreferrer">Import FIAS en 9 heures</a></strong><span>Grand XML, import parallèle et PostgreSQL.</span><span class="article-meta"><span aria-label="Date de publication"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v3M17 3v3M4 9h16M5 5h14v15H5z"/></svg>2023-02-03</span><span aria-label="Note Habr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 5 7 10H5z"/></svg>+3</span><span aria-label="Commentaires"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H8l-3 4z"/></svg>15</span></span></article><article class="article-card"><strong><a href="https://habr.com/ru/articles/712106/" target="_blank" rel="noopener noreferrer">XML comme tableau, version 2</a></strong><span>Approche avec XMLReader streaming et yield.</span><span class="article-meta"><span aria-label="Date de publication"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v3M17 3v3M4 9h16M5 5h14v15H5z"/></svg>2023-01-23</span><span aria-label="Note Habr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 5 7 10H5z"/></svg>+11</span><span aria-label="Commentaires"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H8l-3 4z"/></svg>31</span></span></article><article class="article-card"><strong><a href="https://habr.com/ru/articles/343776/" target="_blank" rel="noopener noreferrer">Catalogue idéal : optimisation de sélection</a></strong><span>EAV, modélisation de données et performance.</span><span class="article-meta"><span aria-label="Date de publication"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v3M17 3v3M4 9h16M5 5h14v15H5z"/></svg>2017-12-03</span><span aria-label="Note Habr"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 5 7 10H5z"/></svg>+10</span><span aria-label="Commentaires"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H8l-3 4z"/></svg>9</span></span></article></div></div></section>
 
-            <address class="mt-8 not-italic">
-                <ul class="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
-                    <li class="rounded-3xl border border-blue-500
-                               bg-blue-700 p-6 shadow-lg">
-                        <p class="text-sm font-semibold uppercase
-                                  tracking-wider text-blue-100">
-                            E-mail
-                        </p>
-                        <a class="mt-3 block text-lg font-semibold
-                           text-white underline decoration-blue-200
-                           underline-offset-4"
-                           href="mailto:ulfnew@gmail.com">
-                            ulfnew@gmail.com
-                        </a>
-                    </li>
-                    <li class="rounded-3xl border border-gray-700
-                               bg-gray-800 p-6 shadow-md">
-                        <p class="text-sm font-semibold uppercase
-                                  tracking-wider text-blue-200">
-                            Téléphone
-                        </p>
-                        <a class="mt-3 block text-lg font-semibold
-                           text-white underline decoration-blue-200
-                           underline-offset-4"
-                           href="tel:+79022726535">
-                            +7-902-272-65-35
-                        </a>
-                    </li>
-                    <li class="rounded-3xl border border-gray-700
-                               bg-gray-800 p-6 shadow-md">
-                        <p class="text-sm font-semibold uppercase
-                                  tracking-wider text-blue-200">
-                            Telegram
-                        </p>
-                        <a class="mt-3 block text-lg font-semibold
-                           text-white underline decoration-blue-200
-                           underline-offset-4"
-                           href="https://t.me/SbWereWolf"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            @sbwerewolf
-                        </a>
-                    </li>
-                    <li class="rounded-3xl border border-gray-700
-                               bg-gray-800 p-6 shadow-md">
-                        <p class="text-sm font-semibold uppercase
-                                  tracking-wider text-blue-200">
-                            WhatsApp
-                        </p>
-                        <a class="mt-3 block text-lg font-semibold
-                           text-white underline decoration-blue-200
-                           underline-offset-4"
-                           href="https://wa.me/79022726535"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            M’écrire sur WhatsApp
-                        </a>
-                    </li>
-                </ul>
-            </address>
-        </div>
-    </section>
+    <section class="section-wrap section-wrap--muted" aria-labelledby="video-title"><div class="mx-auto max-w-7xl px-5 py-14"><div class="section-heading"><p class="eyebrow">Démonstrations vidéo</p><h2 id="video-title">Longues sessions de travail en russe</h2><p>Ces vidéos permettent de voir des explications d’architecture, du code review, le flux de codage et le travail XML/XSD. Je ne me suis pas appuyé sur l’analyse des sous-titres, car ils n’étaient pas disponibles via les endpoints vérifiés.</p></div><div class="three-grid"><article class="compact-card"><button class="image-trigger compact-card__image" type="button" data-full-src="../assets/work/full/video-abstraction.webp" data-alt="Explication abstraction / architecture preview"><img src="../assets/work/video-abstraction.webp" alt="Explication abstraction / architecture preview" loading="lazy"></button><h3>Explication abstraction / architecture</h3><p>Explication longue sur l’ajout de couches d’abstraction et le raisonnement structurel.</p><a href="https://youtu.be/_mGwm4iqyHs" target="_blank" rel="noopener noreferrer">Regarder sur YouTube</a></article><article class="compact-card"><button class="image-trigger compact-card__image" type="button" data-full-src="../assets/work/full/video-code-review.webp" data-alt="Code review et session de codage preview"><img src="../assets/work/video-code-review.webp" alt="Code review et session de codage preview" loading="lazy"></button><h3>Code review et session de codage</h3><p>Review pratique et flux d’implémentation.</p><a href="https://youtu.be/TkBdLSOzI9E" target="_blank" rel="noopener noreferrer">Regarder sur YouTube</a></article><article class="compact-card"><button class="image-trigger compact-card__image" type="button" data-full-src="../assets/work/full/video-xmlpad.webp" data-alt="Travail XmlPad / XSD preview"><img src="../assets/work/video-xmlpad.webp" alt="Travail XmlPad / XSD preview" loading="lazy"></button><h3>Travail XmlPad / XSD</h3><p>Session de travail sur XML Schema et tâches d’intégration.</p><a href="https://youtu.be/Bf6ax20K5hw" target="_blank" rel="noopener noreferrer">Regarder sur YouTube</a></article></div></div></section>
+
+    <section id="process" class="section-wrap" aria-labelledby="process-title"><div class="mx-auto max-w-7xl px-5 py-14"><div class="section-heading"><p class="eyebrow">Ma façon de travailler</p><h2 id="process-title">Flux clair, petits résultats utiles, progrès visible</h2></div><div class="process-grid"><article><h3>Kanban</h3><p>Je préfère un flux de tâches transparent, des états visibles, moins de chaos et une livraison incrémentale.</p></article><article><h3>SMART</h3><p>Les tâches doivent être spécifiques, mesurables, atteignables, pertinentes et limitées dans le temps.</p></article></div><section class="steps-panel" aria-labelledby="steps-title"><h3 id="steps-title">Étapes</h3><ol class="steps-list"><li><span>1</span>Comprendre le vrai objectif</li><li><span>2</span>Transformer les souhaits en exigences</li><li><span>3</span>Découper le travail en tâches Kanban</li><li><span>4</span>Construire le plus petit résultat utile</li><li><span>5</span>Vérifier, documenter et améliorer</li></ol></section></div></section>
+
+    <section id="contact" class="contact-section" aria-labelledby="contact-title"><div class="mx-auto max-w-7xl px-5 py-14"><div class="section-heading"><p class="eyebrow">Contact</p><h2 id="contact-title">Dites-moi ce que vous voulez clarifier ou construire</h2><p>Envoyez une courte description de la tâche, de la situation actuelle et du résultat attendu. Je peux aider à clarifier la prochaine étape technique.</p></div><address class="contact-grid not-italic"><a href="mailto:ulfnew@gmail.com">Email<span>ulfnew@gmail.com</span></a><a href="https://t.me/SbWereWolf" target="_blank" rel="noopener noreferrer">Telegram<span>@SbWereWolf</span></a><a href="tel:+79022726535">Téléphone<span>+7-902-272-65-35</span></a><a href="https://wa.me/79022726535" target="_blank" rel="noopener noreferrer">WhatsApp<span>M’écrire sur WhatsApp</span></a></address><button class="action-button action-button--contact mt-8" type="button" onclick="downloadContactCard()"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 19h14"/></svg>Télécharger le contact</button></div></section>
+
+    <section class="social-section" aria-labelledby="social-title"><div class="mx-auto max-w-7xl px-5 py-10"><div class="section-heading"><p class="eyebrow">Me trouver en ligne</p><h2 id="social-title">Code, écrits, vidéos et pages sociales</h2></div><div class="social-grid"><a href="https://habr.com/ru/users/SbWereWolf/articles/" target="_blank" rel="noopener noreferrer">J’écris sur Habr</a><a href="https://github.com/SbWereWolf" target="_blank" rel="noopener noreferrer">Mon code sur GitHub</a><a href="https://www.youtube.com/playlist?list=PLcY8yNkP4ufacneslrcH31YsPxJbq2MWI" target="_blank" rel="noopener noreferrer">Mes vidéos sur YouTube</a><a href="https://5-sb-werewolf93.livejournal.com" target="_blank" rel="noopener noreferrer">LiveJournal</a><a href="https://vk.com/werewolf83" target="_blank" rel="noopener noreferrer">VK</a></div></div></section>
 </main>
+
+<footer class="site-footer"><div class="mx-auto max-w-7xl px-5 py-4"><p>&copy; 2026 Nicholas Volkhin. Architecte système.</p></div></footer>
+
+<dialog id="imageDialog" class="image-dialog" aria-label="Image portfolio agrandie"><button class="image-dialog__close" type="button" aria-label="Fermer l’aperçu image">&times;</button><img id="imageDialogImage" src="../assets/work/teacher-plan-builder.webp" alt="Aperçu portfolio agrandi"></dialog>
+<script>
+const imageDialog = document.getElementById('imageDialog')
+const imageDialogImage = document.getElementById('imageDialogImage')
+const closeDialogButton = imageDialog.querySelector('.image-dialog__close')
+let lastImageTrigger = null
+function downloadContactCard() { document.getElementById('contactCardLink').click() }
+function closeImageDialog() { imageDialog.close(); if (lastImageTrigger) { lastImageTrigger.focus() } }
+document.querySelectorAll('.image-trigger').forEach((button) => { button.addEventListener('click', () => { lastImageTrigger = button; imageDialogImage.src = button.dataset.fullSrc; imageDialogImage.alt = button.dataset.alt; imageDialog.showModal(); closeDialogButton.focus() }) })
+closeDialogButton.addEventListener('click', closeImageDialog)
+imageDialog.addEventListener('click', (event) => { if (event.target === imageDialog) { closeImageDialog() } })
+</script>
 </body>
 </html>
