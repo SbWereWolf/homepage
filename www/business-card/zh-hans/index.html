@@ -1,162 +1,1086 @@
 <!doctype html>
 <html lang="zh-Hans">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nicholas Volkhin 帮助学生、创始人、团队和非技术客户把不清晰的想法转化为需求、计划、可运行软件、数据模型、集成和文档。">
-    <link rel="icon" href="../favicon.ico" sizes="any">
-    <link rel="manifest" href="../manifest.webmanifest">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="alternate" hreflang="ru" href="https://kv1.me/ru/">
-    <link rel="alternate" hreflang="en" href="https://kv1.me/">
-    <link rel="alternate" hreflang="x-default" href="https://kv1.me/">
-    <link rel="alternate" hreflang="es" href="https://kv1.me/es/">
-    <link rel="alternate" hreflang="fr" href="https://kv1.me/fr/">
-    <link rel="alternate" hreflang="ar" href="https://kv1.me/ar/">
-    <link rel="alternate" hreflang="hi" href="https://kv1.me/hi/">
-    <link rel="alternate" hreflang="zh-Hans" href="https://kv1.me/zh-hans/">
-    <link rel="canonical" href="https://kv1.me/zh-hans/">
-    <meta name="robots" content="index, follow">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Nicholas Volkhin - 系统架构师">
-    <meta property="og:description" content="From simple questions to complex software systems: requirements, software, data, integrations, documentation, and AI-assisted implementation under engineering control.">
-    <meta property="og:url" content="https://kv1.me/zh-hans/">
-    <meta property="og:site_name" content="Nicholas Volkhin">
-    <meta property="og:image" content="https://kv1.me/og-image.jpg">
-    <meta property="og:image:alt" content="Nicholas Volkhin 肖像">
-    <meta property="og:locale" content="zh_CN">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#9fca32">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nicholas Volkhin 帮助学生、创始人、团队和非技术客户把不清晰的想法转化为需求、计划、可运行软件、数据模型、集成和文档。"
+    />
+    <link rel="icon" href="../favicon.ico" sizes="any" />
+    <link rel="manifest" href="../manifest.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="alternate" hreflang="ru" href="https://kv1.me/ru/" />
+    <link rel="alternate" hreflang="en" href="https://kv1.me/" />
+    <link rel="alternate" hreflang="x-default" href="https://kv1.me/" />
+    <link rel="alternate" hreflang="es" href="https://kv1.me/es/" />
+    <link rel="alternate" hreflang="fr" href="https://kv1.me/fr/" />
+    <link rel="alternate" hreflang="ar" href="https://kv1.me/ar/" />
+    <link rel="alternate" hreflang="hi" href="https://kv1.me/hi/" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://kv1.me/zh-hans/" />
+    <link rel="canonical" href="https://kv1.me/zh-hans/" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nicholas Volkhin - 系统架构师" />
+    <meta
+      property="og:description"
+      content="From simple questions to complex software systems: requirements, software, data, integrations, documentation, and AI-assisted implementation under engineering control."
+    />
+    <meta property="og:url" content="https://kv1.me/zh-hans/" />
+    <meta property="og:site_name" content="Nicholas Volkhin" />
+    <meta property="og:image" content="https://kv1.me/og-image.jpg" />
+    <meta property="og:image:alt" content="Nicholas Volkhin 肖像" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#9fca32" />
     <title>Nicholas Volkhin - 从简单问题到复杂软件系统</title>
-</head>
-<body>
-<header class="site-header">
-    <div class="mx-auto max-w-7xl px-5 py-5">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="mx-auto max-w-7xl px-5 py-5">
         <div class="header-inner">
-            <div class="brand-block">
-                <a class="brand-link" href="#top">Nicholas Volkhin</a>
-                <p>系统架构师</p>
-            </div>
-            <nav class="main-nav" aria-label="主导航">
-                <ul class="nav-list">
-                    <li><a href="#services">服务</a></li>
-                    <li><a href="#work">作品</a></li>
-                    <li><a href="#packages">包</a></li>
-                    <li><a href="#writing">文章</a></li>
-                    <li><a href="#process">流程</a></li>
-                    <li><a href="#contact">联系</a></li>
-                </ul>
-            </nav>
-            <nav class="language-nav" aria-label="语言选择">
-                <ul class="language-list">
-                    <li><a href="../ru/" lang="ru">RU</a></li>
-                    <li><a href="../" lang="en">EN</a></li>
-                    <li><a href="../es/" lang="es">ES</a></li>
-                    <li><a href="../fr/" lang="fr">FR</a></li>
-                    <li><a href="../ar/" lang="ar">AR</a></li>
-                    <li><a href="../hi/" lang="hi">HI</a></li>
-                    <li><span aria-current="page">中文</span></li>
-                </ul>
-            </nav>
+          <div class="brand-block">
+            <a class="brand-link" href="#top">Nicholas Volkhin</a>
+            <p>系统架构师</p>
+          </div>
+          <nav class="main-nav" aria-label="主导航">
+            <ul class="nav-list">
+              <li><a href="#services">服务</a></li>
+              <li><a href="#work">作品</a></li>
+              <li><a href="#packages">包</a></li>
+              <li><a href="#writing">文章</a></li>
+              <li><a href="#process">流程</a></li>
+              <li><a href="#contact">联系</a></li>
+            </ul>
+          </nav>
+          <nav class="language-nav" aria-label="语言选择">
+            <ul class="language-list">
+              <li><a href="../ru/" lang="ru">RU</a></li>
+              <li><a href="../" lang="en">EN</a></li>
+              <li><a href="../es/" lang="es">ES</a></li>
+              <li><a href="../fr/" lang="fr">FR</a></li>
+              <li><a href="../ar/" lang="ar">AR</a></li>
+              <li><a href="../hi/" lang="hi">HI</a></li>
+              <li><span aria-current="page">中文</span></li>
+            </ul>
+          </nav>
         </div>
-    </div>
-</header>
+      </div>
+    </header>
 
-<main id="top">
-    <section class="hero-section">
-        <div class="mx-auto grid max-w-7xl gap-10 px-5 py-14 lg:grid-cols-12 lg:items-center lg:py-20">
-            <div class="lg:col-span-7">
-                <p class="eyebrow">面向数据密集和集成密集系统的系统架构师</p>
-                <h1>从简单问题到复杂软件系统</h1>
-                <p class="hero-lead">我帮助学生、创始人、团队和非技术客户把不清晰的想法转化为清晰需求、实用计划、可运行软件、数据模型、集成和文档。</p>
-                <p class="mt-5 max-w-3xl text-lg leading-8">你可以带着咨询请求、学生项目、没有技术规格的想法、落地页、自动化、复杂系统、集成或数据问题来找我。我会帮助明确下一步有用的技术行动。</p>
-                <p class="ai-note mt-6">我使用 AI 加速开发、研究、测试和日常工作，但架构、责任和验证始终保持在工程控制之下。</p>
-                <div class="mt-8 flex flex-wrap gap-3">
-                    <a class="action-link action-link--primary" href="#contact">联系我</a>
-                    <a class="action-link" href="#work">查看作品</a>
-                    <button class="action-button" type="button" onclick="downloadContactCard()"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 19h14"/></svg>下载联系人卡片</button>
-                    <a id="contactCardLink" class="sr-only" href="../contact.vcf" download>下载联系人卡片</a>
-                </div>
+    <main id="top">
+      <section class="hero-section">
+        <div
+          class="mx-auto grid max-w-7xl gap-10 px-5 py-14 lg:grid-cols-12 lg:items-center lg:py-20"
+        >
+          <div class="lg:col-span-7">
+            <p class="eyebrow">面向数据密集和集成密集系统的系统架构师</p>
+            <h1>从简单问题到复杂软件系统</h1>
+            <p class="hero-lead">
+              我帮助学生、创始人、团队和非技术客户把不清晰的想法转化为清晰需求、实用计划、可运行软件、数据模型、集成和文档。
+            </p>
+            <p class="mt-5 max-w-3xl text-lg leading-8">
+              你可以带着咨询请求、学生项目、没有技术规格的想法、落地页、自动化、复杂系统、集成或数据问题来找我。我会帮助明确下一步有用的技术行动。
+            </p>
+            <p class="ai-note mt-6">
+              我使用 AI
+              加速开发、研究、测试和日常工作，但架构、责任和验证始终保持在工程控制之下。
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a class="action-link action-link--primary" href="#contact"
+                >联系我</a
+              >
+              <a class="action-link" href="#work">查看作品</a>
+              <a class="action-button" href="../contact.vcf" download
+                ><svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3v11m0 0 4-4m-4 4-4-4M5 19h14" /></svg
+                >下载联系人卡片</a
+              >
             </div>
-            <aside class="hero-panel lg:col-span-5">
-                <img class="portrait" src="../portrait.jpg" alt="Nicholas Volkhin 肖像">
-                <div><h2>扎实的实践背景</h2><p>PHP、SQL、PostgreSQL、MySQL、XML、集成、后端系统、文档和务实架构。</p></div>
-            </aside>
+          </div>
+          <aside class="hero-panel lg:col-span-5">
+            <img
+              class="portrait"
+              src="../portrait.jpg"
+              alt="Nicholas Volkhin 肖像"
+            />
+            <div>
+              <h2>扎实的实践背景</h2>
+              <p>
+                PHP、SQL、PostgreSQL、MySQL、XML、集成、后端系统、文档和务实架构。
+              </p>
+            </div>
+          </aside>
         </div>
-    </section>
+      </section>
 
-    <section class="section-wrap" aria-labelledby="contact-reasons-title"><div class="mx-auto max-w-7xl px-5 py-14"><div class="section-heading"><p class="eyebrow">何时联系我</p><h2 id="contact-reasons-title">即使任务尚未完全成形也很有用</h2></div><div class="reason-grid"><article>你有想法，但还没有技术任务</article><article>你需要把愿望转化为 SMART 需求</article><article>你是学生，需要技术指导</article><article>你需要落地页或小型商业网站</article><article>你有 XML、Excel、API、SQL 或数据库问题</article><article>你需要能澄清、设计并实现的开发者</article></div></div></section>
+      <section class="section-wrap" aria-labelledby="contact-reasons-title">
+        <div class="mx-auto max-w-7xl px-5 py-14">
+          <div class="section-heading w-full">
+            <p class="eyebrow">何时联系我</p>
+            <h2 id="contact-reasons-title">即使任务尚未完全成形也很有用</h2>
+          </div>
+          <div class="reason-grid grid gap-4 mt-8">
+            <article>你有想法，但还没有技术任务</article>
+            <article>你需要把愿望转化为 SMART 需求</article>
+            <article>你是学生，需要技术指导</article>
+            <article>你需要落地页或小型商业网站</article>
+            <article>你有 XML、Excel、API、SQL 或数据库问题</article>
+            <article>你需要能澄清、设计并实现的开发者</article>
+          </div>
+        </div>
+      </section>
 
-    <section id="services" class="section-wrap section-wrap--muted" aria-labelledby="services-title"><div class="mx-auto max-w-7xl px-5 py-14"><div class="section-heading"><p class="eyebrow">服务</p><h2 id="services-title">我可以帮助什么</h2></div><div class="service-grid"><article><h3>咨询与需求澄清</h3><p>澄清目标、限制、风险、用户以及实际完成标准。</p></article><article><h3>技术规格和用户手册</h3><p>把模糊愿望变成客户、团队和承包方可使用的文档。</p></article><article><h3>落地页和商业网站</h3><p>组织报价、产品卡片、FAQ、联系流程以及面向真实买家的清晰页面。</p></article><article><h3>后端和 Web 应用开发</h3><p>构建服务器逻辑、管理工具、数据流程和可维护的应用部分。</p></article><article><h3>数据模型、SQL、PostgreSQL、XML、XLSX 导入</h3><p>设计存储、导入文件、解析结构化数据并准备报表。</p></article><article><h3>API 和集成流程</h3><p>通过 REST、SOAP、XML、JSON、队列和 CLI 处理步骤连接系统。</p></article><article><h3>重构、诊断、性能和可维护性</h3><p>发现薄弱点、简化结构、提升速度并让代码更易修改。</p></article></div></div></section>
+      <section
+        id="services"
+        class="section-wrap section-wrap--muted"
+        aria-labelledby="services-title"
+      >
+        <div class="mx-auto max-w-7xl px-5 py-14">
+          <div class="section-heading w-full">
+            <p class="eyebrow">服务</p>
+            <h2 id="services-title">我可以帮助什么</h2>
+          </div>
+          <div class="service-grid grid gap-4 mt-8">
+            <article>
+              <h3>咨询与需求澄清</h3>
+              <p>澄清目标、限制、风险、用户以及实际完成标准。</p>
+            </article>
+            <article>
+              <h3>技术规格和用户手册</h3>
+              <p>把模糊愿望变成客户、团队和承包方可使用的文档。</p>
+            </article>
+            <article>
+              <h3>落地页和商业网站</h3>
+              <p>
+                组织报价、产品卡片、FAQ、联系流程以及面向真实买家的清晰页面。
+              </p>
+            </article>
+            <article>
+              <h3>后端和 Web 应用开发</h3>
+              <p>构建服务器逻辑、管理工具、数据流程和可维护的应用部分。</p>
+            </article>
+            <article>
+              <h3>数据模型、SQL、PostgreSQL、XML、XLSX 导入</h3>
+              <p>设计存储、导入文件、解析结构化数据并准备报表。</p>
+            </article>
+            <article>
+              <h3>API 和集成流程</h3>
+              <p>通过 REST、SOAP、XML、JSON、队列和 CLI 处理步骤连接系统。</p>
+            </article>
+            <article>
+              <h3>重构、诊断、性能和可维护性</h3>
+              <p>发现薄弱点、简化结构、提升速度并让代码更易修改。</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <section id="work" class="section-wrap" aria-labelledby="work-title"><div class="mx-auto max-w-7xl px-5 py-14"><div class="section-heading"><p class="eyebrow">精选作品</p><h2 id="work-title">可查看的作品案例</h2><p>先是面向业务的案例，然后是更深入的工程案例。</p></div><div class="portfolio-list">
-                <article class="portfolio-card">
-                    <button class="portfolio-card__media image-trigger" type="button" data-full-src="../assets/work/full/teacher-plan-builder.webp" data-alt="Teacher Plan Builder preview">
-                        <img src="../assets/work/teacher-plan-builder.webp" alt="Teacher Plan Builder preview" loading="lazy">
-                    </button>
-                    <div class="portfolio-card__body"><h3>Teacher Plan Builder</h3><p>教育规划产品，包含落地页、课程和单元规划、月历、练习页以及面向教师的 UX。</p><p class="portfolio-card__tags">落地页 · 教育 · UX</p><a href="https://teacherplanbuilder.com/" target="_blank" rel="noopener noreferrer">打开 Teacher Plan Builder</a></div>
+      <section id="work" class="section-wrap" aria-labelledby="work-title">
+        <div class="mx-auto max-w-7xl px-5 py-14">
+          <div class="section-heading w-full">
+            <p class="eyebrow">精选作品</p>
+            <h2 id="work-title">可查看的作品案例</h2>
+            <p>先是面向业务的案例，然后是更深入的工程案例。</p>
+          </div>
+          <div class="portfolio-list grid gap-5 mt-8">
+            <article class="portfolio-card grid gap-4 overflow-hidden">
+              <button
+                class="portfolio-card__media image-trigger w-full overflow-hidden cursor-pointer p-0 border-0"
+                type="button"
+                data-full-src="../assets/work/full/teacher-plan-builder.webp"
+                data-alt="Teacher Plan Builder preview"
+              >
+                <img
+                  src="../assets/work/teacher-plan-builder.webp"
+                  alt="Teacher Plan Builder preview"
+                  loading="lazy"
+                  class="block h-full w-full object-cover cursor-zoom-in"
+                />
+              </button>
+              <div class="portfolio-card__body">
+                <h3>Teacher Plan Builder</h3>
+                <p>
+                  教育规划产品，包含落地页、课程和单元规划、月历、练习页以及面向教师的
+                  UX。
+                </p>
+                <p class="portfolio-card__tags">落地页 · 教育 · UX</p>
+                <a
+                  href="https://teacherplanbuilder.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >打开 Teacher Plan Builder</a
+                >
+              </div>
+            </article>
+            <article class="portfolio-card grid gap-4 overflow-hidden">
+              <button
+                class="portfolio-card__media image-trigger w-full overflow-hidden cursor-pointer p-0 border-0"
+                type="button"
+                data-full-src="../assets/work/full/rzd-vsem.webp"
+                data-alt="RZD-vsem landing preview"
+              >
+                <img
+                  src="../assets/work/rzd-vsem.webp"
+                  alt="RZD-vsem landing preview"
+                  loading="lazy"
+                  class="block h-full w-full object-cover cursor-zoom-in"
+                />
+              </button>
+              <div class="portfolio-card__body">
+                <h3>RZD-vsem landing</h3>
+                <p>
+                  不锈钢铁路厕所零件的产品落地页/目录页，包含报价结构、产品卡片、配送、FAQ
+                  和联系方式。
+                </p>
+                <p class="portfolio-card__tags">落地页 · 目录 · B2B</p>
+                <a
+                  href="http://rzhd-vsem.ru/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >打开 RZD-vsem landing</a
+                >
+              </div>
+            </article>
+            <article class="portfolio-card grid gap-4 overflow-hidden">
+              <div class="portfolio-card__media doc-card-grid">
+                <article>
+                  <button
+                    class="image-trigger overflow-hidden cursor-pointer p-0 border-0"
+                    type="button"
+                    data-full-src="../assets/work/full/docs-migration.webp"
+                    data-alt="SQL Server 到 MySQL 迁移说明 preview"
+                  >
+                    <img
+                      src="../assets/work/docs-migration.webp"
+                      alt="SQL Server 到 MySQL 迁移说明 preview"
+                      loading="lazy"
+                      class="block h-full w-full object-cover cursor-zoom-in"
+                    />
+                  </button>
+                  <h4>SQL Server 到 MySQL 迁移说明</h4>
+                  <p>面向用户的迁移指南。</p>
+                  <a
+                    href="https://docs.google.com/document/d/1XcFTyk-R32Q4LXPPVPJAvSYFIQ_dqAZFST6KW3yLVv0/edit?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >打开文档</a
+                  >
                 </article>
-                <article class="portfolio-card">
-                    <button class="portfolio-card__media image-trigger" type="button" data-full-src="../assets/work/full/rzd-vsem.webp" data-alt="RZD-vsem landing preview">
-                        <img src="../assets/work/rzd-vsem.webp" alt="RZD-vsem landing preview" loading="lazy">
-                    </button>
-                    <div class="portfolio-card__body"><h3>RZD-vsem landing</h3><p>不锈钢铁路厕所零件的产品落地页/目录页，包含报价结构、产品卡片、配送、FAQ 和联系方式。</p><p class="portfolio-card__tags">落地页 · 目录 · B2B</p><a href="http://rzhd-vsem.ru/" target="_blank" rel="noopener noreferrer">打开 RZD-vsem landing</a></div>
+                <article>
+                  <button
+                    class="image-trigger overflow-hidden cursor-pointer p-0 border-0"
+                    type="button"
+                    data-full-src="../assets/work/full/docs-spec.webp"
+                    data-alt="生产线规划技术规格 preview"
+                  >
+                    <img
+                      src="../assets/work/docs-spec.webp"
+                      alt="生产线规划技术规格 preview"
+                      loading="lazy"
+                      class="block h-full w-full object-cover cursor-zoom-in"
+                    />
+                  </button>
+                  <h4>生产线规划技术规格</h4>
+                  <p>结构化需求和流程规则。</p>
+                  <a
+                    href="https://docs.google.com/document/d/1v9kMto-bRZB78v_-KPBtnhTV4fkL2qItZByXKrGyc4s/edit?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >打开文档</a
+                  >
                 </article>
-                <article class="portfolio-card"><div class="portfolio-card__media doc-card-grid"><article><button class="image-trigger" type="button" data-full-src="../assets/work/full/docs-migration.webp" data-alt="SQL Server 到 MySQL 迁移说明 preview"><img src="../assets/work/docs-migration.webp" alt="SQL Server 到 MySQL 迁移说明 preview" loading="lazy"></button><h4>SQL Server 到 MySQL 迁移说明</h4><p>面向用户的迁移指南。</p><a href="https://docs.google.com/document/d/1XcFTyk-R32Q4LXPPVPJAvSYFIQ_dqAZFST6KW3yLVv0/edit?usp=sharing" target="_blank" rel="noopener noreferrer">打开文档</a></article><article><button class="image-trigger" type="button" data-full-src="../assets/work/full/docs-spec.webp" data-alt="生产线规划技术规格 preview"><img src="../assets/work/docs-spec.webp" alt="生产线规划技术规格 preview" loading="lazy"></button><h4>生产线规划技术规格</h4><p>结构化需求和流程规则。</p><a href="https://docs.google.com/document/d/1v9kMto-bRZB78v_-KPBtnhTV4fkL2qItZByXKrGyc4s/edit?usp=sharing" target="_blank" rel="noopener noreferrer">打开文档</a></article><article><button class="image-trigger" type="button" data-full-src="../assets/work/full/docs-data-model.webp" data-alt="表计读数数据模型 preview"><img src="../assets/work/docs-data-model.webp" alt="表计读数数据模型 preview" loading="lazy"></button><h4>表计读数数据模型</h4><p>数据实体和关系。</p><a href="https://docs.google.com/document/d/1ZBt46HY200Gdd1kjUV5-sBl01ZVT5k4t/edit?usp=sharing&ouid=103198310283058921775&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">打开文档</a></article><article><button class="image-trigger" type="button" data-full-src="../assets/work/full/docs-user-manual.webp" data-alt="广告投放系统用户手册 preview"><img src="../assets/work/docs-user-manual.webp" alt="广告投放系统用户手册 preview" loading="lazy"></button><h4>广告投放系统用户手册</h4><p>面向最终用户的操作指南。</p><a href="https://docs.google.com/document/d/11HDloqp4izi4T6ERK2QhSI5uWq7FExDensulk99G9xw/edit?usp=sharing" target="_blank" rel="noopener noreferrer">打开文档</a></article></div><div class="portfolio-card__body"><h3>技术文档示例</h3><p>四个清晰技术写作示例：说明、需求、数据建模和用户文档。</p><p class="portfolio-card__tags">文档 · 需求 · 手册</p></div></article>
-                <article class="portfolio-card">
-                    <button class="portfolio-card__media image-trigger" type="button" data-full-src="../assets/work/full/autoteka.webp" data-alt="Autoteka preview">
-                        <img src="../assets/work/autoteka.webp" alt="Autoteka preview" loading="lazy">
-                    </button>
-                    <div class="portfolio-card__body"><h3>Autoteka</h3><p>借助 AI 完成的全栈项目：前端、后端、基础设施、文档、测试用例和明确的 agent workflow。</p><p class="portfolio-card__tags">AI-assisted · 全栈 · 测试</p><a href="https://github.com/SbWereWolf/autoteka" target="_blank" rel="noopener noreferrer">打开 Autoteka</a></div>
+                <article>
+                  <button
+                    class="image-trigger overflow-hidden cursor-pointer p-0 border-0"
+                    type="button"
+                    data-full-src="../assets/work/full/docs-data-model.webp"
+                    data-alt="表计读数数据模型 preview"
+                  >
+                    <img
+                      src="../assets/work/docs-data-model.webp"
+                      alt="表计读数数据模型 preview"
+                      loading="lazy"
+                      class="block h-full w-full object-cover cursor-zoom-in"
+                    />
+                  </button>
+                  <h4>表计读数数据模型</h4>
+                  <p>数据实体和关系。</p>
+                  <a
+                    href="https://docs.google.com/document/d/1ZBt46HY200Gdd1kjUV5-sBl01ZVT5k4t/edit?usp=sharing&ouid=103198310283058921775&rtpof=true&sd=true"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >打开文档</a
+                  >
                 </article>
-                <article class="portfolio-card"><button class="portfolio-card__media image-trigger" type="button" data-full-src="../assets/work/full/storage-for-all-things.webp" data-alt="storage-for-all-things EAV architecture preview"><img src="../assets/work/storage-for-all-things.webp" alt="storage-for-all-things EAV architecture preview" loading="lazy"></button><div class="portfolio-card__body"><h3>storage-for-all-things</h3><p>用于灵活结构化数据、任意属性、可搜索实体以及通过预处理结构高速访问的 EAV/目录架构。</p><p class="portfolio-card__tags">架构 · EAV · SQL</p><a href="https://github.com/SbWereWolf/storage-for-all-things" target="_blank" rel="noopener noreferrer">打开 storage-for-all-things</a><h4 class="related-title">相关 Habr 系列</h4><ul class="related-links"><li><a href="https://habr.com/ru/articles/322930/" target="_blank" rel="noopener noreferrer">2017-03-01 · 理想目录：架构草图</a></li><li><a href="https://habr.com/ru/articles/323498/" target="_blank" rel="noopener noreferrer">2017-03-09 · 理想目录：实现方案</a></li><li><a href="https://habr.com/ru/articles/343776/" target="_blank" rel="noopener noreferrer">2017-12-03 · 理想目录：查询优化</a></li><li><a href="https://habr.com/ru/articles/566096/" target="_blank" rel="noopener noreferrer">2021-06-23 · 理想目录：基础库</a></li><li><a href="https://habr.com/ru/articles/599559/" target="_blank" rel="noopener noreferrer">2022-01-11 · 理想目录：性能测量</a></li><li><a href="https://habr.com/ru/articles/599639/" target="_blank" rel="noopener noreferrer">2022-01-12 · 理想目录：使用示例</a></li></ul></div></article>
-                <article class="portfolio-card">
-                    <button class="portfolio-card__media image-trigger" type="button" data-full-src="../assets/work/full/ips-gateway.webp" data-alt="IpsGateway preview">
-                        <img src="../assets/work/ips-gateway.webp" alt="IpsGateway preview" loading="lazy">
-                    </button>
-                    <div class="portfolio-card__body"><h3>IpsGateway</h3><p>C# UNIX 风格支付网关原型：小型 CLI 工具用于读取消息、解析 ISO 20022 XML、转换 payload、记录日志并单独测试每一步。</p><p class="portfolio-card__tags">C# · CLI · ISO 20022</p><a href="https://github.com/SbWereWolf/ips-gateway" target="_blank" rel="noopener noreferrer">打开 IpsGateway</a></div>
+                <article>
+                  <button
+                    class="image-trigger overflow-hidden cursor-pointer p-0 border-0"
+                    type="button"
+                    data-full-src="../assets/work/full/docs-user-manual.webp"
+                    data-alt="广告投放系统用户手册 preview"
+                  >
+                    <img
+                      src="../assets/work/docs-user-manual.webp"
+                      alt="广告投放系统用户手册 preview"
+                      loading="lazy"
+                      class="block h-full w-full object-cover cursor-zoom-in"
+                    />
+                  </button>
+                  <h4>广告投放系统用户手册</h4>
+                  <p>面向最终用户的操作指南。</p>
+                  <a
+                    href="https://docs.google.com/document/d/11HDloqp4izi4T6ERK2QhSI5uWq7FExDensulk99G9xw/edit?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >打开文档</a
+                  >
                 </article>
-                <article class="portfolio-card">
-                    <button class="portfolio-card__media image-trigger" type="button" data-full-src="../assets/work/full/hexviewer.webp" data-alt="HexViewer preview">
-                        <img src="../assets/work/hexviewer.webp" alt="HexViewer preview" loading="lazy">
-                    </button>
-                    <div class="portfolio-card__body"><h3>HexViewer</h3><p>用于二进制文件的 C# 桌面工具，支持偏移、十六进制/十进制/二进制视图、ASCII 表示、滚动和字节序列搜索。</p><p class="portfolio-card__tags">C# · WPF · 二进制数据</p><a href="https://github.com/SbWereWolf/HexViewer" target="_blank" rel="noopener noreferrer">打开 HexViewer</a></div>
-                </article>
-                <article class="portfolio-card">
-                    <button class="portfolio-card__media image-trigger" type="button" data-full-src="../assets/work/full/xlsx-importer.webp" data-alt="xlsx-importer preview">
-                        <img src="../assets/work/xlsx-importer.webp" alt="xlsx-importer preview" loading="lazy">
-                    </button>
-                    <div class="portfolio-card__body"><h3>xlsx-importer</h3><p>Laravel CLI 应用，用于导入 XLSX 数据并为莫斯科候车亭 Wi‑Fi 接入点准备维护报告。</p><p class="portfolio-card__tags">Laravel · CLI · XLSX</p><a href="https://github.com/SbWereWolf/xlsx-importer" target="_blank" rel="noopener noreferrer">打开 xlsx-importer</a></div>
-                </article>
-            </div></div></section>
+              </div>
+              <div class="portfolio-card__body">
+                <h3>技术文档示例</h3>
+                <p>四个清晰技术写作示例：说明、需求、数据建模和用户文档。</p>
+                <p class="portfolio-card__tags">文档 · 需求 · 手册</p>
+              </div>
+            </article>
+            <article class="portfolio-card grid gap-4 overflow-hidden">
+              <button
+                class="portfolio-card__media image-trigger w-full overflow-hidden cursor-pointer p-0 border-0"
+                type="button"
+                data-full-src="../assets/work/full/autoteka.webp"
+                data-alt="Autoteka preview"
+              >
+                <img
+                  src="../assets/work/autoteka.webp"
+                  alt="Autoteka preview"
+                  loading="lazy"
+                  class="block h-full w-full object-cover cursor-zoom-in"
+                />
+              </button>
+              <div class="portfolio-card__body">
+                <h3>Autoteka</h3>
+                <p>
+                  借助 AI
+                  完成的全栈项目：前端、后端、基础设施、文档、测试用例和明确的
+                  agent workflow。
+                </p>
+                <p class="portfolio-card__tags">AI-assisted · 全栈 · 测试</p>
+                <a
+                  href="https://github.com/SbWereWolf/autoteka"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >打开 Autoteka</a
+                >
+              </div>
+            </article>
+            <article class="portfolio-card grid gap-4 overflow-hidden">
+              <button
+                class="portfolio-card__media image-trigger w-full overflow-hidden cursor-pointer p-0 border-0"
+                type="button"
+                data-full-src="../assets/work/full/storage-for-all-things.webp"
+                data-alt="storage-for-all-things EAV architecture preview"
+              >
+                <img
+                  src="../assets/work/storage-for-all-things.webp"
+                  alt="storage-for-all-things EAV architecture preview"
+                  loading="lazy"
+                  class="block h-full w-full object-cover cursor-zoom-in"
+                />
+              </button>
+              <div class="portfolio-card__body">
+                <h3>storage-for-all-things</h3>
+                <p>
+                  用于灵活结构化数据、任意属性、可搜索实体以及通过预处理结构高速访问的
+                  EAV/目录架构。
+                </p>
+                <p class="portfolio-card__tags">架构 · EAV · SQL</p>
+                <a
+                  href="https://github.com/SbWereWolf/storage-for-all-things"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >打开 storage-for-all-things</a
+                >
+                <h4 class="related-title mt-4">相关 Habr 系列</h4>
+                <ul class="related-links">
+                  <li>
+                    <a
+                      href="https://habr.com/ru/articles/322930/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >2017-03-01 · 理想目录：架构草图</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://habr.com/ru/articles/323498/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >2017-03-09 · 理想目录：实现方案</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://habr.com/ru/articles/343776/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >2017-12-03 · 理想目录：查询优化</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://habr.com/ru/articles/566096/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >2021-06-23 · 理想目录：基础库</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://habr.com/ru/articles/599559/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >2022-01-11 · 理想目录：性能测量</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://habr.com/ru/articles/599639/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >2022-01-12 · 理想目录：使用示例</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article class="portfolio-card grid gap-4 overflow-hidden">
+              <button
+                class="portfolio-card__media image-trigger w-full overflow-hidden cursor-pointer p-0 border-0"
+                type="button"
+                data-full-src="../assets/work/full/ips-gateway.webp"
+                data-alt="IpsGateway preview"
+              >
+                <img
+                  src="../assets/work/ips-gateway.webp"
+                  alt="IpsGateway preview"
+                  loading="lazy"
+                  class="block h-full w-full object-cover cursor-zoom-in"
+                />
+              </button>
+              <div class="portfolio-card__body">
+                <h3>IpsGateway</h3>
+                <p>
+                  C# UNIX 风格支付网关原型：小型 CLI 工具用于读取消息、解析 ISO
+                  20022 XML、转换 payload、记录日志并单独测试每一步。
+                </p>
+                <p class="portfolio-card__tags">C# · CLI · ISO 20022</p>
+                <a
+                  href="https://github.com/SbWereWolf/ips-gateway"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >打开 IpsGateway</a
+                >
+              </div>
+            </article>
+            <article class="portfolio-card grid gap-4 overflow-hidden">
+              <button
+                class="portfolio-card__media image-trigger w-full overflow-hidden cursor-pointer p-0 border-0"
+                type="button"
+                data-full-src="../assets/work/full/hexviewer.webp"
+                data-alt="HexViewer preview"
+              >
+                <img
+                  src="../assets/work/hexviewer.webp"
+                  alt="HexViewer preview"
+                  loading="lazy"
+                  class="block h-full w-full object-cover cursor-zoom-in"
+                />
+              </button>
+              <div class="portfolio-card__body">
+                <h3>HexViewer</h3>
+                <p>
+                  用于二进制文件的 C#
+                  桌面工具，支持偏移、十六进制/十进制/二进制视图、ASCII
+                  表示、滚动和字节序列搜索。
+                </p>
+                <p class="portfolio-card__tags">C# · WPF · 二进制数据</p>
+                <a
+                  href="https://github.com/SbWereWolf/HexViewer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >打开 HexViewer</a
+                >
+              </div>
+            </article>
+            <article class="portfolio-card grid gap-4 overflow-hidden">
+              <button
+                class="portfolio-card__media image-trigger w-full overflow-hidden cursor-pointer p-0 border-0"
+                type="button"
+                data-full-src="../assets/work/full/xlsx-importer.webp"
+                data-alt="xlsx-importer preview"
+              >
+                <img
+                  src="../assets/work/xlsx-importer.webp"
+                  alt="xlsx-importer preview"
+                  loading="lazy"
+                  class="block h-full w-full object-cover cursor-zoom-in"
+                />
+              </button>
+              <div class="portfolio-card__body">
+                <h3>xlsx-importer</h3>
+                <p>
+                  Laravel CLI 应用，用于导入 XLSX 数据并为莫斯科候车亭 Wi‑Fi
+                  接入点准备维护报告。
+                </p>
+                <p class="portfolio-card__tags">Laravel · CLI · XLSX</p>
+                <a
+                  href="https://github.com/SbWereWolf/xlsx-importer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >打开 xlsx-importer</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <section id="packages" class="section-wrap section-wrap--muted" aria-labelledby="packages-title"><div class="mx-auto max-w-7xl px-5 py-14"><div class="section-heading"><p class="eyebrow">包</p><h2 id="packages-title">可复用 PHP 工具</h2></div><div class="three-grid"><article class="compact-card"><button class="image-trigger compact-card__image" type="button" data-full-src="../assets/work/full/pkg-language-specific.webp" data-alt="sbwerewolf/language-specific Packagist README preview"><img src="../assets/work/pkg-language-specific.webp" alt="sbwerewolf/language-specific Packagist README preview" loading="lazy"></button><h3>sbwerewolf/language-specific</h3><p>PHP 中安全访问嵌套数组并可预测地转换值。</p><a href="https://packagist.org/packages/sbwerewolf/language-specific" target="_blank" rel="noopener noreferrer">在 Packagist 打开</a></article><article class="compact-card"><button class="image-trigger compact-card__image" type="button" data-full-src="../assets/work/full/pkg-xml-navigator.webp" data-alt="sbwerewolf/xml-navigator Packagist README preview"><img src="../assets/work/pkg-xml-navigator.webp" alt="sbwerewolf/xml-navigator Packagist README preview" loading="lazy"></button><h3>sbwerewolf/xml-navigator</h3><p>将 XML 流式提取为普通 PHP 数组。</p><a href="https://packagist.org/packages/sbwerewolf/xml-navigator" target="_blank" rel="noopener noreferrer">在 Packagist 打开</a></article><article class="compact-card"><button class="image-trigger compact-card__image" type="button" data-full-src="../assets/work/full/pkg-fias-gar.webp" data-alt="sbwerewolf/fias-gar-data-import-tool Packagist README preview"><img src="../assets/work/pkg-fias-gar.webp" alt="sbwerewolf/fias-gar-data-import-tool Packagist README preview" loading="lazy"></button><h3>sbwerewolf/fias-gar-data-import-tool</h3><p>用于初始导入和更新的 FIAS GAR 导入工具。</p><a href="https://packagist.org/packages/sbwerewolf/fias-gar-data-import-tool" target="_blank" rel="noopener noreferrer">在 Packagist 打开</a></article></div></div></section>
+      <section
+        id="packages"
+        class="section-wrap section-wrap--muted"
+        aria-labelledby="packages-title"
+      >
+        <div class="mx-auto max-w-7xl px-5 py-14">
+          <div class="section-heading w-full">
+            <p class="eyebrow">包</p>
+            <h2 id="packages-title">可复用 PHP 工具</h2>
+          </div>
+          <div class="three-grid grid gap-4 mt-8">
+            <article class="compact-card overflow-hidden">
+              <button
+                class="image-trigger compact-card__image block w-full overflow-hidden cursor-pointer p-0 border-0"
+                type="button"
+                data-full-src="../assets/work/full/pkg-language-specific.webp"
+                data-alt="sbwerewolf/language-specific Packagist README preview"
+              >
+                <img
+                  src="../assets/work/pkg-language-specific.webp"
+                  alt="sbwerewolf/language-specific Packagist README preview"
+                  loading="lazy"
+                  class="block h-full w-full object-cover cursor-zoom-in"
+                />
+              </button>
+              <h3>sbwerewolf/language-specific</h3>
+              <p>PHP 中安全访问嵌套数组并可预测地转换值。</p>
+              <a
+                href="https://packagist.org/packages/sbwerewolf/language-specific"
+                target="_blank"
+                rel="noopener noreferrer"
+                >在 Packagist 打开</a
+              >
+            </article>
+            <article class="compact-card overflow-hidden">
+              <button
+                class="image-trigger compact-card__image block w-full overflow-hidden cursor-pointer p-0 border-0"
+                type="button"
+                data-full-src="../assets/work/full/pkg-xml-navigator.webp"
+                data-alt="sbwerewolf/xml-navigator Packagist README preview"
+              >
+                <img
+                  src="../assets/work/pkg-xml-navigator.webp"
+                  alt="sbwerewolf/xml-navigator Packagist README preview"
+                  loading="lazy"
+                  class="block h-full w-full object-cover cursor-zoom-in"
+                />
+              </button>
+              <h3>sbwerewolf/xml-navigator</h3>
+              <p>将 XML 流式提取为普通 PHP 数组。</p>
+              <a
+                href="https://packagist.org/packages/sbwerewolf/xml-navigator"
+                target="_blank"
+                rel="noopener noreferrer"
+                >在 Packagist 打开</a
+              >
+            </article>
+            <article class="compact-card overflow-hidden">
+              <button
+                class="image-trigger compact-card__image block w-full overflow-hidden cursor-pointer p-0 border-0"
+                type="button"
+                data-full-src="../assets/work/full/pkg-fias-gar.webp"
+                data-alt="sbwerewolf/fias-gar-data-import-tool Packagist README preview"
+              >
+                <img
+                  src="../assets/work/pkg-fias-gar.webp"
+                  alt="sbwerewolf/fias-gar-data-import-tool Packagist README preview"
+                  loading="lazy"
+                  class="block h-full w-full object-cover cursor-zoom-in"
+                />
+              </button>
+              <h3>sbwerewolf/fias-gar-data-import-tool</h3>
+              <p>用于初始导入和更新的 FIAS GAR 导入工具。</p>
+              <a
+                href="https://packagist.org/packages/sbwerewolf/fias-gar-data-import-tool"
+                target="_blank"
+                rel="noopener noreferrer"
+                >在 Packagist 打开</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <section id="writing" class="section-wrap" aria-labelledby="writing-title"><div class="mx-auto max-w-7xl px-5 py-14"><div class="section-heading"><p class="eyebrow">写作和公开材料</p><h2 id="writing-title">公开解释和技术笔记</h2><p>在这些平台阅读我的内容。</p></div><div class="platform-links"><a class="platform-link platform-link--primary" href="https://habr.com/ru/users/SbWereWolf/articles/" target="_blank" rel="noopener noreferrer"><span class="platform-logo" aria-hidden="true">H</span>Habr</a><a class="platform-link" href="https://dev.to/sbwerewolf" target="_blank" rel="noopener noreferrer"><span class="platform-logo" aria-hidden="true">DEV</span>Dev.to</a><a class="platform-link" href="https://sb-werewolf.hashnode.dev/" target="_blank" rel="noopener noreferrer"><span class="platform-logo" aria-hidden="true">#</span>Hashnode</a><a class="platform-link" href="https://medium.com/@sbwerewolf" target="_blank" rel="noopener noreferrer"><span class="platform-logo" aria-hidden="true">M</span>Medium</a></div><h3 class="subsection-title">最有意思的文章</h3><div class="article-grid"><article class="article-card"><strong><a href="https://habr.com/ru/articles/476102/" target="_blank" rel="noopener noreferrer">类型安全的 PHP 数组访问</a></strong><span>关于显式值处理的包来源文章。</span><span class="article-meta"><span aria-label="发布日期"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v3M17 3v3M4 9h16M5 5h14v15H5z"/></svg>2019-11-16</span><span aria-label="Habr 评分"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 5 7 10H5z"/></svg>+2</span><span aria-label="评论"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H8l-3 4z"/></svg>66</span></span></article><article class="article-card"><strong><a href="https://habr.com/ru/articles/278595/" target="_blank" rel="noopener noreferrer">SQL 报表构建器：想法</a></strong><span>基于 SQL 构建报表的实用想法。</span><span class="article-meta"><span aria-label="发布日期"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v3M17 3v3M4 9h16M5 5h14v15H5z"/></svg>2016-03-04</span><span aria-label="Habr 评分"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 5 7 10H5z"/></svg>+2</span><span aria-label="评论"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H8l-3 4z"/></svg>4</span></span></article><article class="article-card"><strong><a href="https://habr.com/ru/articles/316820/" target="_blank" rel="noopener noreferrer">小型 VDS 托管调研</a></strong><span>多个托管服务商的实用基础设施调研。</span><span class="article-meta"><span aria-label="发布日期"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v3M17 3v3M4 9h16M5 5h14v15H5z"/></svg>2016-12-04</span><span aria-label="Habr 评分"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 5 7 10H5z"/></svg>+1</span><span aria-label="评论"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H8l-3 4z"/></svg>42</span></span></article><article class="article-card"><strong><a href="https://habr.com/ru/articles/714804/" target="_blank" rel="noopener noreferrer">9 小时导入 FIAS</a></strong><span>大型 XML、并行导入和 PostgreSQL。</span><span class="article-meta"><span aria-label="发布日期"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v3M17 3v3M4 9h16M5 5h14v15H5z"/></svg>2023-02-03</span><span aria-label="Habr 评分"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 5 7 10H5z"/></svg>+3</span><span aria-label="评论"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H8l-3 4z"/></svg>15</span></span></article><article class="article-card"><strong><a href="https://habr.com/ru/articles/712106/" target="_blank" rel="noopener noreferrer">XML 作为数组，版本 2</a></strong><span>使用流式 XMLReader 和 yield 的方法。</span><span class="article-meta"><span aria-label="发布日期"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v3M17 3v3M4 9h16M5 5h14v15H5z"/></svg>2023-01-23</span><span aria-label="Habr 评分"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 5 7 10H5z"/></svg>+11</span><span aria-label="评论"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H8l-3 4z"/></svg>31</span></span></article><article class="article-card"><strong><a href="https://habr.com/ru/articles/343776/" target="_blank" rel="noopener noreferrer">理想目录：查询优化</a></strong><span>EAV、数据建模和性能。</span><span class="article-meta"><span aria-label="发布日期"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3v3M17 3v3M4 9h16M5 5h14v15H5z"/></svg>2017-12-03</span><span aria-label="Habr 评分"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 5 7 10H5z"/></svg>+10</span><span aria-label="评论"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14v10H8l-3 4z"/></svg>9</span></span></article></div></div></section>
+      <section
+        id="writing"
+        class="section-wrap"
+        aria-labelledby="writing-title"
+      >
+        <div class="mx-auto max-w-7xl px-5 py-14">
+          <div class="section-heading w-full">
+            <p class="eyebrow">写作和公开材料</p>
+            <h2 id="writing-title">公开解释和技术笔记</h2>
+            <p>在这些平台阅读我的内容。</p>
+          </div>
+          <div class="platform-links">
+            <a
+              class="platform-link platform-link--primary inline-flex items-center gap-3 py-3 px-4 no-underline rounded-lg"
+              href="https://habr.com/ru/users/SbWereWolf/articles/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span
+                class="platform-logo inline-flex items-center justify-center rounded-lg"
+                aria-hidden="true"
+                >H</span
+              >Habr</a
+            ><a
+              class="platform-link inline-flex items-center gap-3 py-3 px-4 no-underline rounded-lg"
+              href="https://dev.to/sbwerewolf"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span
+                class="platform-logo inline-flex items-center justify-center rounded-lg"
+                aria-hidden="true"
+                >DEV</span
+              >Dev.to</a
+            ><a
+              class="platform-link inline-flex items-center gap-3 py-3 px-4 no-underline rounded-lg"
+              href="https://sb-werewolf.hashnode.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span
+                class="platform-logo inline-flex items-center justify-center rounded-lg"
+                aria-hidden="true"
+                >#</span
+              >Hashnode</a
+            ><a
+              class="platform-link inline-flex items-center gap-3 py-3 px-4 no-underline rounded-lg"
+              href="https://medium.com/@sbwerewolf"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><span
+                class="platform-logo inline-flex items-center justify-center rounded-lg"
+                aria-hidden="true"
+                >M</span
+              >Medium</a
+            >
+          </div>
+          <h3 class="subsection-title mt-8">最有意思的文章</h3>
+          <div class="article-grid grid gap-4 mt-8">
+            <article class="article-card">
+              <strong
+                ><a
+                  href="https://habr.com/ru/articles/476102/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >类型安全的 PHP 数组访问</a
+                ></strong
+              ><span>关于显式值处理的包来源文章。</span
+              ><span class="article-meta"
+                ><span aria-label="发布日期"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 3v3M17 3v3M4 9h16M5 5h14v15H5z" /></svg
+                  >2019-11-16</span
+                ><span aria-label="Habr 评分"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m12 5 7 10H5z" /></svg
+                  >+2</span
+                ><span aria-label="评论"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 5h14v10H8l-3 4z" /></svg
+                  >66</span
+                ></span
+              >
+            </article>
+            <article class="article-card">
+              <strong
+                ><a
+                  href="https://habr.com/ru/articles/278595/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >SQL 报表构建器：想法</a
+                ></strong
+              ><span>基于 SQL 构建报表的实用想法。</span
+              ><span class="article-meta"
+                ><span aria-label="发布日期"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 3v3M17 3v3M4 9h16M5 5h14v15H5z" /></svg
+                  >2016-03-04</span
+                ><span aria-label="Habr 评分"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m12 5 7 10H5z" /></svg
+                  >+2</span
+                ><span aria-label="评论"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 5h14v10H8l-3 4z" /></svg
+                  >4</span
+                ></span
+              >
+            </article>
+            <article class="article-card">
+              <strong
+                ><a
+                  href="https://habr.com/ru/articles/316820/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >小型 VDS 托管调研</a
+                ></strong
+              ><span>多个托管服务商的实用基础设施调研。</span
+              ><span class="article-meta"
+                ><span aria-label="发布日期"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 3v3M17 3v3M4 9h16M5 5h14v15H5z" /></svg
+                  >2016-12-04</span
+                ><span aria-label="Habr 评分"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m12 5 7 10H5z" /></svg
+                  >+1</span
+                ><span aria-label="评论"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 5h14v10H8l-3 4z" /></svg
+                  >42</span
+                ></span
+              >
+            </article>
+            <article class="article-card">
+              <strong
+                ><a
+                  href="https://habr.com/ru/articles/714804/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >9 小时导入 FIAS</a
+                ></strong
+              ><span>大型 XML、并行导入和 PostgreSQL。</span
+              ><span class="article-meta"
+                ><span aria-label="发布日期"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 3v3M17 3v3M4 9h16M5 5h14v15H5z" /></svg
+                  >2023-02-03</span
+                ><span aria-label="Habr 评分"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m12 5 7 10H5z" /></svg
+                  >+3</span
+                ><span aria-label="评论"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 5h14v10H8l-3 4z" /></svg
+                  >15</span
+                ></span
+              >
+            </article>
+            <article class="article-card">
+              <strong
+                ><a
+                  href="https://habr.com/ru/articles/712106/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >XML 作为数组，版本 2</a
+                ></strong
+              ><span>使用流式 XMLReader 和 yield 的方法。</span
+              ><span class="article-meta"
+                ><span aria-label="发布日期"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 3v3M17 3v3M4 9h16M5 5h14v15H5z" /></svg
+                  >2023-01-23</span
+                ><span aria-label="Habr 评分"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m12 5 7 10H5z" /></svg
+                  >+11</span
+                ><span aria-label="评论"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 5h14v10H8l-3 4z" /></svg
+                  >31</span
+                ></span
+              >
+            </article>
+            <article class="article-card">
+              <strong
+                ><a
+                  href="https://habr.com/ru/articles/343776/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >理想目录：查询优化</a
+                ></strong
+              ><span>EAV、数据建模和性能。</span
+              ><span class="article-meta"
+                ><span aria-label="发布日期"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 3v3M17 3v3M4 9h16M5 5h14v15H5z" /></svg
+                  >2017-12-03</span
+                ><span aria-label="Habr 评分"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m12 5 7 10H5z" /></svg
+                  >+10</span
+                ><span aria-label="评论"
+                  ><svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M5 5h14v10H8l-3 4z" /></svg
+                  >9</span
+                ></span
+              >
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <section class="section-wrap section-wrap--muted" aria-labelledby="video-title"><div class="mx-auto max-w-7xl px-5 py-14"><div class="section-heading"><p class="eyebrow">视频演示</p><h2 id="video-title">俄语长篇工作演示</h2><p>这些视频有助于查看架构讲解、代码评审、编码流程以及 XML/XSD 工作。我没有依赖字幕分析，因为通过已检查的 endpoints 无法获取字幕。</p></div><div class="three-grid"><article class="compact-card"><button class="image-trigger compact-card__image" type="button" data-full-src="../assets/work/full/video-abstraction.webp" data-alt="抽象/架构讲解 preview"><img src="../assets/work/video-abstraction.webp" alt="抽象/架构讲解 preview" loading="lazy"></button><h3>抽象/架构讲解</h3><p>关于添加抽象层和结构推理的长篇讲解。</p><a href="https://youtu.be/_mGwm4iqyHs" target="_blank" rel="noopener noreferrer">在 YouTube 观看</a></article><article class="compact-card"><button class="image-trigger compact-card__image" type="button" data-full-src="../assets/work/full/video-code-review.webp" data-alt="代码评审和编码演示 preview"><img src="../assets/work/video-code-review.webp" alt="代码评审和编码演示 preview" loading="lazy"></button><h3>代码评审和编码演示</h3><p>实际评审和实现流程。</p><a href="https://youtu.be/TkBdLSOzI9E" target="_blank" rel="noopener noreferrer">在 YouTube 观看</a></article><article class="compact-card"><button class="image-trigger compact-card__image" type="button" data-full-src="../assets/work/full/video-xmlpad.webp" data-alt="XmlPad / XSD 工作 preview"><img src="../assets/work/video-xmlpad.webp" alt="XmlPad / XSD 工作 preview" loading="lazy"></button><h3>XmlPad / XSD 工作</h3><p>XML Schema 和集成方向的工作演示。</p><a href="https://youtu.be/Bf6ax20K5hw" target="_blank" rel="noopener noreferrer">在 YouTube 观看</a></article></div></div></section>
+      <section
+        class="section-wrap section-wrap--muted"
+        aria-labelledby="video-title"
+      >
+        <div class="mx-auto max-w-7xl px-5 py-14">
+          <div class="section-heading w-full">
+            <p class="eyebrow">视频演示</p>
+            <h2 id="video-title">俄语长篇工作演示</h2>
+            <p>
+              这些视频有助于查看架构讲解、代码评审、编码流程以及 XML/XSD
+              工作。我没有依赖字幕分析，因为通过已检查的 endpoints
+              无法获取字幕。
+            </p>
+          </div>
+          <div class="three-grid grid gap-4 mt-8">
+            <article class="compact-card overflow-hidden">
+              <button
+                class="image-trigger compact-card__image block w-full overflow-hidden cursor-pointer p-0 border-0"
+                type="button"
+                data-full-src="../assets/work/full/video-abstraction.webp"
+                data-alt="抽象/架构讲解 preview"
+              >
+                <img
+                  src="../assets/work/video-abstraction.webp"
+                  alt="抽象/架构讲解 preview"
+                  loading="lazy"
+                  class="block h-full w-full object-cover cursor-zoom-in"
+                />
+              </button>
+              <h3>抽象/架构讲解</h3>
+              <p>关于添加抽象层和结构推理的长篇讲解。</p>
+              <a
+                href="https://youtu.be/_mGwm4iqyHs"
+                target="_blank"
+                rel="noopener noreferrer"
+                >在 YouTube 观看</a
+              >
+            </article>
+            <article class="compact-card overflow-hidden">
+              <button
+                class="image-trigger compact-card__image block w-full overflow-hidden cursor-pointer p-0 border-0"
+                type="button"
+                data-full-src="../assets/work/full/video-code-review.webp"
+                data-alt="代码评审和编码演示 preview"
+              >
+                <img
+                  src="../assets/work/video-code-review.webp"
+                  alt="代码评审和编码演示 preview"
+                  loading="lazy"
+                  class="block h-full w-full object-cover cursor-zoom-in"
+                />
+              </button>
+              <h3>代码评审和编码演示</h3>
+              <p>实际评审和实现流程。</p>
+              <a
+                href="https://youtu.be/TkBdLSOzI9E"
+                target="_blank"
+                rel="noopener noreferrer"
+                >在 YouTube 观看</a
+              >
+            </article>
+            <article class="compact-card overflow-hidden">
+              <button
+                class="image-trigger compact-card__image block w-full overflow-hidden cursor-pointer p-0 border-0"
+                type="button"
+                data-full-src="../assets/work/full/video-xmlpad.webp"
+                data-alt="XmlPad / XSD 工作 preview"
+              >
+                <img
+                  src="../assets/work/video-xmlpad.webp"
+                  alt="XmlPad / XSD 工作 preview"
+                  loading="lazy"
+                  class="block h-full w-full object-cover cursor-zoom-in"
+                />
+              </button>
+              <h3>XmlPad / XSD 工作</h3>
+              <p>XML Schema 和集成方向的工作演示。</p>
+              <a
+                href="https://youtu.be/Bf6ax20K5hw"
+                target="_blank"
+                rel="noopener noreferrer"
+                >在 YouTube 观看</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <section id="process" class="section-wrap" aria-labelledby="process-title"><div class="mx-auto max-w-7xl px-5 py-14"><div class="section-heading"><p class="eyebrow">我的工作方式</p><h2 id="process-title">清晰流程、小而有用的结果、可见进度</h2></div><div class="process-grid"><article><h3>Kanban</h3><p>我偏好透明的任务流、可见状态、更少混乱和增量交付。</p></article><article><h3>SMART</h3><p>任务应当具体、可衡量、可达成、相关并有时间边界。</p></article></div><section class="steps-panel" aria-labelledby="steps-title"><h3 id="steps-title">步骤</h3><ol class="steps-list"><li><span>1</span>理解真实目标</li><li><span>2</span>把愿望转成需求</li><li><span>3</span>把工作拆成 Kanban 任务</li><li><span>4</span>构建最小有用结果</li><li><span>5</span>验证、记录并改进</li></ol></section></div></section>
+      <section
+        id="process"
+        class="section-wrap"
+        aria-labelledby="process-title"
+      >
+        <div class="mx-auto max-w-7xl px-5 py-14">
+          <div class="section-heading w-full">
+            <p class="eyebrow">我的工作方式</p>
+            <h2 id="process-title">清晰流程、小而有用的结果、可见进度</h2>
+          </div>
+          <div class="process-grid grid gap-4 mt-8">
+            <article>
+              <h3>Kanban</h3>
+              <p>我偏好透明的任务流、可见状态、更少混乱和增量交付。</p>
+            </article>
+            <article>
+              <h3>SMART</h3>
+              <p>任务应当具体、可衡量、可达成、相关并有时间边界。</p>
+            </article>
+          </div>
+          <section class="steps-panel" aria-labelledby="steps-title">
+            <h3 id="steps-title">步骤</h3>
+            <ol class="steps-list grid gap-4 mt-8 list-none p-0">
+              <li class="flex items-center gap-3 p-4">
+                <span class="inline-flex items-center justify-center rounded-lg"
+                  >1</span
+                >理解真实目标
+              </li>
+              <li class="flex items-center gap-3 p-4">
+                <span class="inline-flex items-center justify-center rounded-lg"
+                  >2</span
+                >把愿望转成需求
+              </li>
+              <li class="flex items-center gap-3 p-4">
+                <span class="inline-flex items-center justify-center rounded-lg"
+                  >3</span
+                >把工作拆成 Kanban 任务
+              </li>
+              <li class="flex items-center gap-3 p-4">
+                <span class="inline-flex items-center justify-center rounded-lg"
+                  >4</span
+                >构建最小有用结果
+              </li>
+              <li class="flex items-center gap-3 p-4">
+                <span class="inline-flex items-center justify-center rounded-lg"
+                  >5</span
+                >验证、记录并改进
+              </li>
+            </ol>
+          </section>
+        </div>
+      </section>
 
-    <section id="contact" class="contact-section" aria-labelledby="contact-title"><div class="mx-auto max-w-7xl px-5 py-14"><div class="section-heading"><p class="eyebrow">联系</p><h2 id="contact-title">告诉我你想澄清或构建什么</h2><p>发送任务、当前情况和期望结果的简短描述。我可以帮助明确下一步技术行动。</p></div><address class="contact-grid not-italic"><a href="mailto:ulfnew@gmail.com">Email<span>ulfnew@gmail.com</span></a><a href="https://t.me/SbWereWolf" target="_blank" rel="noopener noreferrer">Telegram<span>@SbWereWolf</span></a><a href="tel:+79022726535">电话<span>+7-902-272-65-35</span></a><a href="https://wa.me/79022726535" target="_blank" rel="noopener noreferrer">WhatsApp<span>在 WhatsApp 给我留言</span></a></address><button class="action-button action-button--contact mt-8" type="button" onclick="downloadContactCard()"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 19h14"/></svg>下载联系人卡片</button></div></section>
+      <section
+        id="contact"
+        class="contact-section"
+        aria-labelledby="contact-title"
+      >
+        <div class="mx-auto max-w-7xl px-5 py-14">
+          <div class="section-heading w-full">
+            <p class="eyebrow">联系</p>
+            <h2 id="contact-title">告诉我你想澄清或构建什么</h2>
+            <p>
+              发送任务、当前情况和期望结果的简短描述。我可以帮助明确下一步技术行动。
+            </p>
+          </div>
+          <address class="contact-grid grid gap-4 mt-8 not-italic">
+            <a href="mailto:ulfnew@gmail.com"
+              >Email<span>ulfnew@gmail.com</span></a
+            ><a
+              href="https://t.me/SbWereWolf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Telegram<span>@SbWereWolf</span></a
+            ><a href="tel:+79022726535">电话<span>+7-902-272-65-35</span></a
+            ><a
+              href="https://wa.me/79022726535"
+              target="_blank"
+              rel="noopener noreferrer"
+              >WhatsApp<span>在 WhatsApp 给我留言</span></a
+            >
+          </address>
+          <a
+            class="action-button action-button--contact mt-8"
+            href="../contact.vcf"
+            download
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3v11m0 0 4-4m-4 4-4-4M5 19h14" /></svg
+            >下载联系人卡片</a
+          >
+        </div>
+      </section>
 
-    <section class="social-section" aria-labelledby="social-title"><div class="mx-auto max-w-7xl px-5 py-10"><div class="section-heading"><p class="eyebrow">在线找到我</p><h2 id="social-title">代码、文章、视频和社交页面</h2></div><div class="social-grid"><a href="https://habr.com/ru/users/SbWereWolf/articles/" target="_blank" rel="noopener noreferrer">我在 Habr 写作</a><a href="https://github.com/SbWereWolf" target="_blank" rel="noopener noreferrer">我在 GitHub 的代码</a><a href="https://www.youtube.com/playlist?list=PLcY8yNkP4ufacneslrcH31YsPxJbq2MWI" target="_blank" rel="noopener noreferrer">我在 YouTube 的视频</a><a href="https://5-sb-werewolf93.livejournal.com" target="_blank" rel="noopener noreferrer">LiveJournal</a><a href="https://vk.com/werewolf83" target="_blank" rel="noopener noreferrer">VK</a></div></div></section>
-</main>
+      <section class="social-section" aria-labelledby="social-title">
+        <div class="mx-auto max-w-7xl px-5 py-10">
+          <div class="section-heading w-full">
+            <p class="eyebrow">在线找到我</p>
+            <h2 id="social-title">代码、文章、视频和社交页面</h2>
+          </div>
+          <div class="social-grid grid gap-4 mt-8">
+            <a
+              href="https://habr.com/ru/users/SbWereWolf/articles/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >我在 Habr 写作</a
+            ><a
+              href="https://github.com/SbWereWolf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >我在 GitHub 的代码</a
+            ><a
+              href="https://www.youtube.com/playlist?list=PLcY8yNkP4ufacneslrcH31YsPxJbq2MWI"
+              target="_blank"
+              rel="noopener noreferrer"
+              >我在 YouTube 的视频</a
+            ><a
+              href="https://5-sb-werewolf93.livejournal.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LiveJournal</a
+            ><a
+              href="https://vk.com/werewolf83"
+              target="_blank"
+              rel="noopener noreferrer"
+              >VK</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
 
-<footer class="site-footer"><div class="mx-auto max-w-7xl px-5 py-4"><p>&copy; 2026 Nicholas Volkhin. 系统架构师。</p></div></footer>
+    <footer class="site-footer">
+      <div class="mx-auto max-w-7xl px-5 py-4">
+        <p>&copy; 2026 Nicholas Volkhin. 系统架构师。</p>
+      </div>
+    </footer>
 
-<dialog id="imageDialog" class="image-dialog" aria-label="放大的作品图片"><button class="image-dialog__close" type="button" aria-label="关闭图片预览">&times;</button><img id="imageDialogImage" src="../assets/work/teacher-plan-builder.webp" alt="放大的作品预览"></dialog>
-<script>
-const imageDialog = document.getElementById('imageDialog')
-const imageDialogImage = document.getElementById('imageDialogImage')
-const closeDialogButton = imageDialog.querySelector('.image-dialog__close')
-let lastImageTrigger = null
-function downloadContactCard() { document.getElementById('contactCardLink').click() }
-function closeImageDialog() { imageDialog.close(); if (lastImageTrigger) { lastImageTrigger.focus() } }
-document.querySelectorAll('.image-trigger').forEach((button) => { button.addEventListener('click', () => { lastImageTrigger = button; imageDialogImage.src = button.dataset.fullSrc; imageDialogImage.alt = button.dataset.alt; imageDialog.showModal(); closeDialogButton.focus() }) })
-closeDialogButton.addEventListener('click', closeImageDialog)
-imageDialog.addEventListener('click', (event) => { if (event.target === imageDialog) { closeImageDialog() } })
-</script>
-</body>
+    <dialog id="imageDialog" class="image-dialog" aria-label="放大的作品图片">
+      <button
+        class="image-dialog__close inline-flex items-center justify-center rounded-lg"
+        type="button"
+        aria-label="关闭图片预览"
+      >
+        &times;</button
+      ><img
+        id="imageDialogImage"
+        src="../assets/work/teacher-plan-builder.webp"
+        alt="放大的作品预览"
+      />
+    </dialog>
+    <script src="../business-card.js" defer></script>
+  </body>
 </html>
