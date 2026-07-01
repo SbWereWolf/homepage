@@ -48,6 +48,9 @@ fi
 
   git reset --hard "$REMOTE/$BRANCH"
 
+  echo "$(date) publishing sb-werewolf-2025"
+  (cd home/src && npm ci && npm run publish:sb-werewolf-2025)
+
   docker compose pull
   docker compose up -d --remove-orphans
 

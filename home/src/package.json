@@ -6,13 +6,16 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:css": "tailwindcss -i ./sb-werewolf-2025/src/sb-werewolf-2025.css -o ./sb-werewolf-2025/src/out/sb-werewolf-2025.css",
+    "publish:sb-werewolf-2025": "npm run build:css && node ./scripts/publish-sb-werewolf-2025.mjs"
   },
   "devDependencies": {
-    "vite": "^7.0.4",
+    "@tailwindcss/cli": "^4.1.11",
     "@tailwindcss/vite": "^4.1.11",
     "glob": "^11.0.3",
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^4.1.11",
+    "vite": "^7.0.4"
   },
   "dependencies": {
   }
