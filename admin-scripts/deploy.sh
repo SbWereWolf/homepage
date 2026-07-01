@@ -17,6 +17,7 @@ BRANCH="${BRANCH:-master}"
 REMOTE="${REMOTE:-origin}"
 LOG="/var/log/kv1-deploy.log"
 LOCK="/var/lock/kv1-deploy.lock"
+PUBLISHED_HOME_INDEX="$APP_DIR/www/home/sb-werewolf-2025/index.html"
 
 mkdir -p /var/lock /var/log /var/lib
 
@@ -38,15 +39,23 @@ fi
   LOCAL="$(git rev-parse HEAD)"
   REMOTE_HASH="$(git rev-parse "$REMOTE/$BRANCH")"
 
-  if [ "$LOCAL" = "$REMOTE_HASH" ]; then
+  if [ "$LOCAL" = "$REMOTE_HASH" ] && [ -f "$PUBLISHED_HOME_INDEX" ]; then
     echo "$(date) no changes ($LOCAL)"
     exit 0
   fi
 
-  echo "$(date) updating $LOCAL -> $REMOTE_HASH"
-  echo "$LOCAL" > /var/lib/kv1-prev-commit || true
+  if [ "$LOCAL" = "$REMOTE_HASH" ]; then
+    echo "$(date) no git changes ($LOCAL), but $PUBLISHED_HOME_INDEX is missing"
+  else
+    echo "$(date) updating $LOCAL -> $REMOTE_HASH"
+    echo "$LOCAL" > /var/lib/kv1-prev-commit || true
 
-  git reset --hard "$REMOTE/$BRANCH"
+    git reset --hard "$REMOTE/$BRANCH"
+  fi
+
+  if [ -f "$APP_DIR/admin-scripts/deploy.sh" ]; then
+    install -m 0755 "$APP_DIR/admin-scripts/deploy.sh" /usr/local/bin/kv1-deploy
+  fi
 
   echo "$(date) publishing sb-werewolf-2025"
   (cd home/src && npm ci && npm run publish:sb-werewolf-2025)
