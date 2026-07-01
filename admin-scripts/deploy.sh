@@ -57,6 +57,11 @@ fi
     install -m 0755 "$APP_DIR/admin-scripts/deploy.sh" /usr/local/bin/kv1-deploy
   fi
 
+  if ! command -v node >/dev/null 2>&1 || ! command -v npm >/dev/null 2>&1; then
+    echo "$(date) node/npm is required to publish sb-werewolf-2025. Install Node.js 22, then rerun kv1-deploy.service."
+    exit 1
+  fi
+
   echo "$(date) publishing sb-werewolf-2025"
   (cd home/src && npm ci && npm run publish:sb-werewolf-2025)
 

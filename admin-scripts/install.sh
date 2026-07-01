@@ -23,6 +23,11 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get update
 apt-get install -y --no-install-recommends   ca-certificates curl git wget bc logrotate fail2ban
 
+if ! command -v node >/dev/null 2>&1 || ! node -e "const [major] = process.versions.node.split('.').map(Number); process.exit(major >= 22 ? 0 : 1)" >/dev/null 2>&1; then
+  curl -fsSL https://deb.nodesource.com/setup_22.x | bash -
+  apt-get install -y --no-install-recommends nodejs
+fi
+
 # Docker: не ставим docker-ce/containerd.io (конфликтует с Debian containerd/runc)
 if ! command -v docker >/dev/null 2>&1; then
   echo "Docker not found -> installing Debian docker.io"
