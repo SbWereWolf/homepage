@@ -4,8 +4,9 @@ const closeDialogButton = imageDialog?.querySelector(".image-dialog__close");
 let lastImageTrigger = null;
 
 function closeImageDialog() {
-  imageDialog.close();
-  lastImageTrigger?.focus();
+  if (imageDialog.open) {
+    imageDialog.close();
+  }
 }
 
 if (
@@ -25,6 +26,9 @@ if (
   });
 
   closeDialogButton.addEventListener("click", closeImageDialog);
+  imageDialog.addEventListener("close", () => {
+    lastImageTrigger?.focus();
+  });
   imageDialog.addEventListener("click", (event) => {
     if (event.target === imageDialog) {
       closeImageDialog();
